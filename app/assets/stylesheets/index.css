@@ -1,0 +1,19 @@
+/* navbar styles */
+
+#title {
+  font-size: 70px;
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.top-bar {
+  height: 100px;
+  text-align: center;
+  background-color: #92B558;
+}
+
+#dropdown a {
+  background-color: #92B558;
+}
