@@ -38,4 +38,21 @@ feature 'navbar' do
     expect(page).to have_link('Sign Out')
   end
 
+  scenario 'I expect the links to direct to the correct pages' do
+
+    visit new_user_session_path
+
+    fill_in 'Email', with: 'john@example.com'
+    fill_in 'Password', with: 'password'
+
+    click_button 'Log in'
+    visit '/'
+
+    click_link 'Dashboard'
+    expect(page).to have_current_path('/goals/dashboard')
+
+    click_link 'Settings'
+    expect(page).to have_current_path('users/edit')
+  end
+
 end

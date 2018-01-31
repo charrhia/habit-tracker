@@ -3,52 +3,53 @@
 <head>
   <title>HabitTracker</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+
   <link href="https://fonts.googleapis.com/css?family=Lobster|Quicksand" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/patientslikeme/react-calendar-heatmap/d0a7d802/src/styles.css">
-
-
-    <%= javascript_include_tag "vendor/modernizr" %>
-
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <nav class="top-bar" data-topbar role="navigation">
-    <ul class="title-area">
-      <li class="name">
-      <a href="/"><h1 id="title">Habit Tracker</h1></a>
-      </li>
-    </ul>
 
-    <section class="top-bar-section" id="dropdown">
-      <ul class="right">
-        <%- if current_user -%>
-          <li class="has-dropdown">
-            <a href="#">User Actions</a>
-            <ul class="dropdown">
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-            </ul>
-        <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <%- end -%>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <a href="/"><h1 id="title">Habit Tracker</h1></a>
+        </li>
       </ul>
-    </section>
-  </nav>
+
+      <section class="top-bar-section" id="dropdown">
+        <ul class="right">
+          <%- if current_user -%>
+            <li class="has-dropdown">
+              <a href="#">User Actions</a>
+              <ul class="dropdown-pane">
+                <!-- change to dropdown when fixed -->
+                <li><a href="/goals/dashboard">Dashboard</a></li>
+                <li><%= link_to 'Settings', edit_user_registration_path %></li>
+                <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+              </ul>
+          <%- else -%>
+            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <li><%= link_to 'Sign In', new_user_session_path %></li>
+          <%- end -%>
+        </ul>
+      </section>
+    </nav>
 
 
-  <%- flash.each do |key, value| -%>
+
+    <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
     </div>
-  <%- end -%>
+    <%- end -%>
 
-  <%= yield %>
+    <%= yield %>
 
-  <%= javascript_include_tag 'application' %>
-  <%= yield :extra_footer %>
-</body>
-</html>
+    <%= javascript_include_tag 'application' %>
+    <%= yield :extra_footer %>
+  </body>
+  </html>
