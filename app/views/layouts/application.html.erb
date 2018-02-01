@@ -20,14 +20,18 @@
         </li>
       </ul>
 
+      <br /><br />
+
+
       <section class="top-bar-section" id="dropdown">
         <ul class="right">
           <%- if current_user -%>
-            <li class="has-dropdown">
-              <a href="#">User Actions</a>
+            <!-- <li class="has-dropdown"> -->
+              <!-- <a href="#">User Actions</a> -->
               <ul class="dropdown-pane">
                 <!-- change to dropdown when fixed -->
                 <li><a href="/goals/dashboard">Dashboard</a></li>
+                      <li><a href="/goals/new">Update Goals</a></li>
                 <li><%= link_to 'Settings', edit_user_registration_path %></li>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
               </ul>
@@ -41,8 +45,9 @@
 
 
 
+
     <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
+    <div id="flash" class="flash flash-<%= key %>">
       <%= value %>
     </div>
     <%- end -%>
