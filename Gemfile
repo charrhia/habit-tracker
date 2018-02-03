@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem "carrierwave"
 
+group :test do
+  gem 'coveralls', require: false
+end
 
 group :development, :test do
 
