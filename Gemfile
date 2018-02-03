@@ -37,6 +37,9 @@ end
 
 gem "carrierwave"
 
+gem "active_model_serializers", '~> 0.10'
+
+
 group :test do
   gem 'coveralls', require: false
 end
