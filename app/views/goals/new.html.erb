@@ -6,8 +6,7 @@
     <% @goals.each do |goal| %>
     <button><%= goal.name %>
 
-      <%= link_to 'delete',  { action: :destroy, id: goal.id }, method: :delete, data: { confirm: 'Are you sure?' } %>
-
+      <%= link_to 'delete',  { action: :destroy, id: goal.id }, method: :delete %></button>
       <% end %>
     </ul>
 
@@ -19,17 +18,6 @@
 
     <%= form_for(@goal) do |f| %>
 
-    <div class="errors">
-      <% if @goal.errors.any? %>
-      <h2>Attention: Please fill out the field</h2>
-      <ul>
-        <% @goal.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-        <% end %>
-      </ul>
-      <% end %>
-    </div>
-
 
     <div class="field">
       <%= f.label :name, 'Goal:' %><br />
@@ -40,7 +28,6 @@
     <div class="submit">
       <%= f.submit 'Add Goal' %>
     </div>
-
 
     <% end %>
 

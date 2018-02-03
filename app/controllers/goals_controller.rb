@@ -2,11 +2,22 @@ class GoalsController < ApplicationController
 
   def index
     @goals = Goal.all
+    @goal = Goal.new
+
+    @inputs = Input.all
+    @input = Input.new
+
+
+
   end
 
   def new
     @goals = Goal.all
     @goal = Goal.new
+
+    @inputs = Input.all
+    @input = Input.new
+
   end
 
   def create
@@ -23,6 +34,10 @@ class GoalsController < ApplicationController
 
   def show
     @goals = Goal.all
+    @inputs = Input.all
+
+
+
   end
 
   def destroy
@@ -43,6 +58,7 @@ class GoalsController < ApplicationController
 
   def goal_params
     params.require(:goal).permit(:name)
+    params.require(:input).permit(:goal_id)
   end
 
 end

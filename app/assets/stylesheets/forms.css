@@ -1,0 +1,64 @@
+
+/* form */
+
+.field {
+  max-width: 300px;
+  font-size: 20px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+input[type="submit"] {
+  padding: 10px 10px;
+  font-size: 20px;
+  color: #92B558;
+  margin-left: 10px;
+}
+
+input[type="submit"]:hover {
+  color: white;
+  background-color: #92B558;
+  cursor: pointer;
+}
+
+.form-things {
+  margin-top: 50px;
+  background-color: lightgrey;
+  max-width: 350px;
+  padding: 10px 10px;
+  margin-left: 35%;
+  align-content: center;
+}
+
+.form-things label {
+  /* color: #92B558; */
+  text-decoration: underline;
+}
+
+
+/* form validation */
+
+.errors {
+  color: red;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.errors h2 {
+  color: red;
+  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+
+
+.form {
+  font-family: 'Quicksand', sans-serif;
+  align-content: center;
+  margin-bottom: 100px;
+  margin-left: 30%;
+}
