@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](https://codeship.com/projects/91db6e20-e769-0135-b764-76d2e62999cc/status?branch=master)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
