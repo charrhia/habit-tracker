@@ -22,7 +22,7 @@ feature 'navbar' do
 
   end
 
-  scenario 'I want to see a dropdown for user actions' do
+  scenario 'I want to see a list of user actions' do
     user = FactoryBot.create(:user)
 
     visit new_user_session_path
@@ -32,27 +32,10 @@ feature 'navbar' do
 
     click_button 'Log in'
     expect(page).to have_content('Signed in successfully')
-    expect(page).to have_link('User Actions')
+    expect(page).to have_link('Update Goals')
     expect(page).to have_link('Settings')
     expect(page).to have_link('Dashboard')
     expect(page).to have_link('Sign Out')
-  end
-
-  scenario 'I expect the links to direct to the correct pages' do
-
-    visit new_user_session_path
-
-    fill_in 'Email', with: 'john@example.com'
-    fill_in 'Password', with: 'password'
-
-    click_button 'Log in'
-    visit '/'
-
-    click_link 'Dashboard'
-    expect(page).to have_current_path('/goals/dashboard')
-
-    click_link 'Settings'
-    expect(page).to have_current_path('users/edit')
   end
 
 end
