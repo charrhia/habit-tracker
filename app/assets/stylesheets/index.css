@@ -20,48 +20,14 @@
 }
 
 
-/* form styles */
-
-.form {
-  font-family: 'Quicksand', sans-serif;
-  align-content: center;
-  margin-bottom: 100px;
-  margin-left: 30%;
-}
-
-/* .field {
-  border-radius: 10px;
-  max-width: 300px;
-  margin-top: 20px;
-  padding: 10px 10px;
-  background-color: #92B558;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.field label {
-  color: white;
-  display: inline;
-} */
-
-/* input[type="submit"] {
-  padding: 10px 10px;
-  margin-top: 20px;
-  background-color: #92B558;
-  border: none;
-  color: white;
-  font-size: 20px;
-} */
-
-
 /* body text */
 
 #intro {
 
   font-family: 'Quicksand', sans-serif;
-  font-size: 25px;
-  color: lightgrey;
-  margin-top: 200px;
+  font-size: 40px;
+  color: #92B558;
+  margin-top: 75px;
   text-align: center;
 }
 
