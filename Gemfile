@@ -29,6 +29,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
+group :development do
+  gem 'rails_real_favicon'
+end
+
+
 gem "carrierwave"
 
 gem "active_model_serializers", '~> 0.10'
