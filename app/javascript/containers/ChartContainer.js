@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import WeeklyReportTile from '../components/WeeklyReportTile';
 
 class ChartContainer extends Component {
   constructor(props) {
@@ -19,8 +20,12 @@ class ChartContainer extends Component {
           <button>Weekly Report</button>
           <button>Monthly Report</button>
           <button>Annual Report</button>
-          
+
         </div>
+
+
+        <WeeklyReportTile />
+
 
 
 
