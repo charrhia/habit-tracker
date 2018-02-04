@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :goals, only: [:index]
+        resources :inputs, only: [:index]
     end
   end
+
+
 
 
 
@@ -19,7 +22,6 @@ Rails.application.routes.draw do
   resources :goals do
     resources :inputs, only: [:index, :new, :create, :destroy]
   end
-
   resources :inputs, only: [:index, :new]
 
 end

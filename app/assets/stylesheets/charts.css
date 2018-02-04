@@ -38,3 +38,17 @@
 
 
 /* charts */
+
+
+#graphs {
+  background-color: white;
+  margin: 0 auto;
+  align-content: center;
+  text-align: center;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+
+#graphs h2, p {
+  font-family: 'Quicksand', sans-serif;
+}
