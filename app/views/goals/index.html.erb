@@ -3,15 +3,24 @@
   <h2>Hello Charlotte, <p>What did you accomplish today?</p></h2>
 </div>
 
+<p id="direct-msg">Want to start tracking new goals? Click <a href="/goals/new">here</a></p>
 
 <div class="form-things">
 
-<%= form_for(@input) do |f| %>
+  <%= form_for(@input) do |f| %>
 
 
   <div class="field">
-    <%= f.label :goal_id, "Goal" %><br />
-    <%= f.text_field :goal_id %>
+
+    <%= f.label :goal_id %><br />
+    <%= f.select(:goal_id, @goal_options) %>
+  </div>
+
+
+  <div class="field">
+
+    <%= f.label :date %><br />
+    <%= f.text_field :date %>
   </div>
 
 
