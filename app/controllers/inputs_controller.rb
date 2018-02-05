@@ -22,7 +22,8 @@ class InputsController < ApplicationController
     input = Input.new(input_params)
 
     if input.save
-      render json: input
+      flash[:notice] = "Journal updated"
+      redirect_to '/'
     else
       render json: { error: input.errors.full_messages }, status: :unprocessable_entity
     end
