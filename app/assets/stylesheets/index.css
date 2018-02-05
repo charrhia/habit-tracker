@@ -6,30 +6,36 @@
   color: white;
   text-align: center;
   padding: 10px 10px;
+  text-shadow: 1px 1px 0px #000;
 }
 
+#title #subheader {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  text-shadow: none;
+  font-style: italic;
+}
 
 .top-bar {
   height: 20%;
   text-align: center;
   background-color: #92B558;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.7);;
 }
 
-#dropdown a {
-  background-color: #92B558;
-}
-
-
-/* body text */
-
-#intro {
-
+.side-area a {
   font-family: 'Quicksand', sans-serif;
-  font-size: 40px;
-  color: #92B558;
-  margin-top: 75px;
-  text-align: center;
+  font-size: 15px;
+  margin-left: 10px;
+  color: white;
 }
+
+.side-area a:hover {
+  color: #273746;
+  text-decoration: underline;
+}
+
+/* flash msg */
 
 #flash {
   color: green;
@@ -40,12 +46,21 @@
   margin-top: 20px;
 }
 
+/* intro message */
+
 #direct-msg {
   font-size: 15px;
   margin-top: 10px;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   margin-top: 20px;
+
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 /* icons */
@@ -54,4 +69,29 @@
   color: #92B558;
   margin-left: 10px;
   font-size: 30px;
+}
+
+/* body text */
+
+#intro {
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  letter-spacing: -1px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+#intro h2, p {
+  color: white;
+}
+
+.intro-container {
+  padding-top: 20px;
 }

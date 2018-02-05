@@ -39,7 +39,7 @@ group :development do
 end
 
 
-gem "carrierwave"
+gem 'carrierwave', '~> 1.2.1'
 
 gem "active_model_serializers", '~> 0.10'
 

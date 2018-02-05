@@ -5,9 +5,11 @@ class ProfilePhotoUploader < CarrierWave::Uploader::Base
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.test?
-  storage :fog
+  # storage :fog
+  storage :file
   else
-    storage :fog
+    storage :file
+    # storage :fog
   end
   # storage :fog
 

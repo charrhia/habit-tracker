@@ -30,10 +30,16 @@ input[type="submit"]:hover {
   padding: 10px 10px;
   margin-left: 35%;
   align-content: center;
+  background: rgba(189, 195, 199, 0.9);
+  margin: 0 auto;
 }
 
+.form-container {
+  margin-top: 20px;
+}
+
+
 .form-things label {
-  /* color: #92B558; */
   text-decoration: underline;
 }
 
