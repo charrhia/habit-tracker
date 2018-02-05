@@ -1,0 +1,40 @@
+/* div container */
+
+#settings {
+  margin-left: 50px;
+  margin-top: 20px;
+  max-width: 550px;
+}
+
+
+/* text */
+
+#settings h2 {
+ font-family: 'Quicksand', sans-serif;
+ font-size: 30px;
+ margin-bottom: 25px;
+}
+
+#settings h3 {
+font-family: 'Quicksand', sans-serif;
+font-size: 30px;
+}
+
+#settings i {
+  font-size: 13px;
+}
+
+#settings label {
+  color: green;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#settings em {
+  font-size: 13px;
+}
+
+#settings a {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
