@@ -1,3 +1,4 @@
 class Input < ApplicationRecord
-  belongs_to :input
+  validates_presence_of :goal_id
+  belongs_to :goal
 end

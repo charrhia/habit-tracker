@@ -39,3 +39,11 @@
   align-content: center;
   margin-top: 20px;
 }
+
+#direct-msg {
+  font-size: 15px;
+  margin-top: 10px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}

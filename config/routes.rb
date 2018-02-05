@@ -15,13 +15,11 @@ Rails.application.routes.draw do
   end
 
 
-
-
-
-
   resources :goals do
     resources :inputs, only: [:index, :new, :create, :destroy]
   end
-  resources :inputs, only: [:index, :new]
+
+
+  resources :inputs, only: [:index, :new, :create]
 
 end

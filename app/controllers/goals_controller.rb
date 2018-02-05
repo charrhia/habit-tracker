@@ -9,6 +9,10 @@ class GoalsController < ApplicationController
 
 
 
+# for select drop down
+    @goal_options = Goal.all.map{ |goal| [ goal.name, goal.id ] }
+
+
   end
 
   def new
