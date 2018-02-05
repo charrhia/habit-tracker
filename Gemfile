@@ -28,7 +28,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'fog-aws'
 
+group :development, :test do
+  gem "dotenv-rails"
+end
 
 group :development do
   gem 'rails_real_favicon'
