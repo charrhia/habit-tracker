@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root 'goals#index'
+  root 'goals#splash'
 
   get '/goals/dashboard', to: 'goals#dashboard'
   get '/goals/new', to: 'goals#new'
+
 
   devise_for :users
 

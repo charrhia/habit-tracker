@@ -275,7 +275,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10)
   capybara
-  carrierwave
+  carrierwave (~> 1.2.1)
   coveralls
   devise
   dotenv-rails

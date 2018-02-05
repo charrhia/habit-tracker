@@ -1,0 +1,39 @@
+<style>
+	.top-bar { display:none; }
+</style>
+
+
+<div class="body-4">
+
+  <div id="intro-splash">
+
+    <h1>Welcome</h1>
+
+  </div>
+
+  <div id="welcome-text">
+    <h2>Sign up and start your journey to a happier, healthier life</h2>
+
+  </div>
+
+
+      <div class="dropdown">
+        <span>    <i class="fas fa-bars" id="splash-nav"></i></span>
+        <div class="dropdown-content">
+
+          <%- if current_user -%>
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <%- else -%>
+          <%= link_to 'Sign Up', new_user_registration_path %>
+          <%= link_to 'Sign In', new_user_session_path %>
+          <%- end -%>
+
+
+        </div>
+      </div>
+
+
+
+
+
+</div>

@@ -1,35 +1,51 @@
-<div class="goal-list">
+<div class="body-3">
 
-  <h3>Here are a list of your goals. Would you like to update any?</h3>
+  <div class="goal-list">
 
-  <ul>
-    <% @goals.each do |goal| %>
-    <button><%= goal.name %>
+    <h3>Here is a list of your goals. Would you like to update?</h3>
 
-      <%= link_to 'delete',  { action: :destroy, id: goal.id }, method: :delete %></button>
+      <ul>
+        <% @goals.each do |goal| %>
+        <button><%= goal.name %>
+
+          <%= link_to '[x]',  { action: :destroy, id: goal.id }, method: :delete %></button>
+          <% end %>
+      </ul>
+
+  </div>
+
+
+  <div class="form-container">
+
+    <div class="form-things">
+
+      <%= form_for(@goal) do |f| %>
+
+
+      <div class="field">
+
+        <%- flash.each do |key, value| -%>
+          <div id="flash" class="flash flash-<%= key %>">
+            <%= value %>
+          </div>
+        <%- end -%>
+
+        
+        <%= f.label :name, 'Goal:' %><br />
+        <%= f.text_field :name %>
+      </div>
+
+      <br />
+
+      <div class="submit">
+        <%= f.submit 'Add Goal' %>
+      </div>
+
       <% end %>
-    </ul>
+
+
+    </div>
 
   </div>
 
-
-
-  <div class="form-things">
-
-    <%= form_for(@goal) do |f| %>
-
-
-    <div class="field">
-      <%= f.label :name, 'Goal:' %><br />
-      <%= f.text_field :name %>
-    </div>
-
-    <br />
-    <div class="submit">
-      <%= f.submit 'Add Goal' %>
-    </div>
-
-    <% end %>
-
-
-  </div>
+</div>

@@ -1,0 +1,34 @@
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+.body-1 {
+  background-image: url('splash.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  height: 80%;
+}
+
+.body-2 {
+  background-image: url('chart.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+
+.body-3 {
+  background-image: url('coffee.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+
+.body-4 {
+  background-image: url('home.jpg');
+  background-size: cover;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
