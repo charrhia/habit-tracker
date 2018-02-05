@@ -13,10 +13,20 @@ class WeeklyReportTile extends Component {
 
   render() {
 
+    let goals = this.props.goals;
+    let inputs = this.props.inputs;
+
+    //
+    // inputsData = inputs.map((input) => {
+    //
+    // })
+
+
+
     // practice data until database is connected
 
     const data = [
-      {name: 'Eat Healthy', "Eat Healthy": 7},
+      {name: 'Eat Healthy', "Eat Healthy": 3},
       {name: 'Exercise', "Exercise": 5},
       {name: 'Read', "Read": 6},
       {name: 'Code', "Code": 5},

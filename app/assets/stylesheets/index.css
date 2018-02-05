@@ -47,3 +47,11 @@
   text-align: center;
   margin-top: 20px;
 }
+
+/* icons */
+
+#icon {
+  color: #92B558;
+  margin-left: 10px;
+  font-size: 30px;
+}

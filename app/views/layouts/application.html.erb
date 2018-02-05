@@ -13,7 +13,7 @@
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= csrf_meta_tags %>
 
-
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 
 </head>
@@ -43,7 +43,7 @@
                 <!-- change to dropdown when fixed -->
                   <li><a href="/">Home</a></li>
                 <li><a href="/goals/dashboard">Dashboard</a></li>
-                      <li><a href="/goals/new">Update Goals</a></li>
+                      <li><a href="/goals/new">Goals</a></li>
                 <li><%= link_to 'Settings', edit_user_registration_path %></li>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
               </ul>
@@ -63,6 +63,8 @@
       <%= value %>
     </div>
     <%- end -%>
+
+
 
     <%= yield %>
 
