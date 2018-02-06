@@ -6,7 +6,7 @@ body {
 
 
 .body-1 {
-  background-image: url('splash.jpg');
+  background: image-url("splash.jpg");
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
   height: 80%;
