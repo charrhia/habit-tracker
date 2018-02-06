@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'fog-aws'
 
+gem 'groupdate'
+
 group :development, :test do
   gem "dotenv-rails"
 end

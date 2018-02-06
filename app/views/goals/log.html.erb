@@ -1,0 +1,12 @@
+<div id="log">
+  <h3>Activity Log</h3>
+
+    <ul>
+      <% @inputs.each do |input| %>
+      <button><b><%= input.goal.name %><br /></b><%= input.created_at.to_date %>
+
+        <%= link_to '[x]',  { action: :destroy, id: input.id }, method: :delete %></button>
+        <% end %>
+    </ul>
+
+</div>
