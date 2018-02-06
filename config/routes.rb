@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/goals/dashboard', to: 'goals#dashboard'
   get '/goals/new', to: 'goals#new'
-
+  get '/log', to: 'goals#log'
 
   devise_for :users
 

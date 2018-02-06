@@ -30,7 +30,9 @@ class InputsController < ApplicationController
 
   end
 
-
+  def log
+    @inputs = Input.all
+  end
 
 
 

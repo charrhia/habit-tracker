@@ -15,6 +15,13 @@ class GoalsController < ApplicationController
 
   end
 
+  def log
+    @inputs = Input.all
+  end
+
+
+
+
   def new
     @goals = Goal.all
     @goal = Goal.new
@@ -39,9 +46,6 @@ class GoalsController < ApplicationController
   def show
     @goals = Goal.all
     @inputs = Input.all
-
-
-
   end
 
   def destroy
