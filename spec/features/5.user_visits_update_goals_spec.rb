@@ -2,13 +2,6 @@ require 'rails_helper'
 
 feature 'update goals page' do
 
-  # Acceptance Criteria:
-  # * WHEN I CLICK ON UPDATE GOALS I SHOULD BE DIRECTED TO '/GOALS/NEW'
-  #   I SHOULD SEE A LIST OF ALL MY GOALS
-  # * I SHOULD SEE A FORM TO ADD A NEW GOAL
-  # * I SHOULD SEE A DELETE BUTTON TO REMOVE GOALS
-
-
   scenario 'i should be directed to the /goals/new page when clicking on Update Goals' do
 
     Goal.create!({
@@ -22,7 +15,7 @@ feature 'update goals page' do
     fill_in 'Password confirmation', with: 'password'
 
     click_button 'Sign up'
-    click_link 'Update Goals'
+    click_link 'Goals'
 
     expect(page).to have_content('Eat Healthy')
     expect(page).to have_current_path('/goals/new')
@@ -42,9 +35,9 @@ feature 'update goals page' do
     fill_in 'Password confirmation', with: 'password'
 
     click_button 'Sign up'
-    click_link 'Update Goals'
+    click_link 'Goals'
 
-    click_link 'delete'
+    click_link '[x]'
     expect(page).to have_no_content('Eat Healthy')
 
   end

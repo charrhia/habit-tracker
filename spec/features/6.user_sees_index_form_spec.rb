@@ -11,7 +11,7 @@ feature 'journal index page' do
 
 
     Input.create({
-      goal_id: 1, date: "2/20/2017"
+      goal_id: 1
       })
 
     visit new_user_registration_path
@@ -23,12 +23,11 @@ feature 'journal index page' do
     click_button 'Sign up'
 
     select 'Eat Healthy', from: 'Goal'
-    fill_in 'Date', with: '2/20/2017'
     click_button 'Submit'
 
 
     expect(page).to have_content('Journal updated')
-    expect(page).to have_current_path('/')
+    expect(page).to have_current_path('/goals')
 
   end
 end
