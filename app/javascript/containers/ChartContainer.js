@@ -54,9 +54,9 @@ let inputs = this.state.inputs;
 
         <div id="action-list">
 
+          <button>Daily Report</button>
           <button>Weekly Report</button>
           <button>Monthly Report</button>
-          <button>Annual Report</button>
 
         </div>
 

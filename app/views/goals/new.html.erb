@@ -8,7 +8,7 @@
         <% @goals.each do |goal| %>
         <button><%= goal.name %>
 
-          <%= link_to '[x]',  { action: :destroy, id: goal.id }, method: :delete %></button>
+          <%= link_to '[x]',  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %></button>
           <% end %>
       </ul>
 
@@ -30,12 +30,16 @@
           </div>
         <%- end -%>
 
-        
+
         <%= f.label :name, 'Goal:' %><br />
         <%= f.text_field :name %>
       </div>
 
       <br />
+
+        <% if current_user %>
+            <%= f.hidden_field :user_id, value: current_user.id%>
+        <% end %>
 
       <div class="submit">
         <%= f.submit 'Add Goal' %>

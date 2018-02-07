@@ -4,15 +4,17 @@ feature 'update goals page' do
 
   scenario 'i should be directed to the /goals/new page when clicking on Update Goals' do
 
-    Goal.create!({
-      name: "Eat Healthy"
+    user = FactoryBot.create(:user)
+
+    goal = Goal.create!({
+      name: "Eat Healthy", user_id: user.id
       })
 
     visit new_user_registration_path
 
-    fill_in 'Email', with: 'john@example.com'
-    fill_in 'Password', with: 'password'
-    fill_in 'Password confirmation', with: 'password'
+    fill_in 'Email', with: user.email
+    fill_in 'Password', with: user.password
+    fill_in 'Password confirmation', with: user.password
 
     click_button 'Sign up'
     click_link 'Goals'
@@ -25,7 +27,7 @@ feature 'update goals page' do
   scenario 'I should be able to delete each goal' do
 
     Goal.create!({
-      name: "Eat Healthy"
+      name: "Eat Healthy", user_id: user.id
       })
 
     visit new_user_registration_path

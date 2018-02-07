@@ -28,6 +28,10 @@
         <%= f.select(:goal_id, @goal_options) %>
       </div>
 
+      <% if current_user %>
+          <%= f.hidden_field :user_id, value: current_user.id%>
+      <% end %>
+
       <div class="submit">
         <%= f.submit 'Submit' %><i class="fas fa-check" id="icon"></i>
       </div>

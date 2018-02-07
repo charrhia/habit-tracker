@@ -1,7 +1,6 @@
 class InputsController < ApplicationController
 
   def index
-    # @inputs = Input.all
     @goal = Goal.find(params[:goal_id])
 
     @inputs = @goal.inputs
@@ -31,13 +30,13 @@ class InputsController < ApplicationController
   end
 
   def log
-    @inputs = Input.all
+    @inputs = Input.where(:user_id => current_user.id)
   end
 
 
 
   def input_params
-    params.require(:input).permit(:goal_id, :date)
+    params.require(:input).permit(:goal_id, :date, :user_id)
   end
 
 end
