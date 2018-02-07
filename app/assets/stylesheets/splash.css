@@ -27,14 +27,6 @@
 
 /* navigation dropdown */
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-  color: white;
-  margin-left: 50%;
-  margin-top: 20px;
-}
-
 
 #splash-nav {
   color: white;
@@ -44,6 +36,17 @@
   border-radius: 10px;
   opacity: 0.5;
 }
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin-left: 50%;
+  margin-top: 20px;
+}
+
 
 .dropdown-content {
   display: none;
