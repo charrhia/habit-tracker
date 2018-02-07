@@ -1,0 +1,71 @@
+
+
+@media only screen and (max-width: 768px) {
+
+  .top-bar {
+    height: 25%;
+    font-size: 12px;
+  }
+
+  .top-bar h1 {
+    font-size: 50px;
+  }
+
+  #direct-msg, #intro {
+    max-width: 60%;
+  }
+
+  .form-things {
+    max-width: 300px;
+  }
+
+  #graphs {
+    max-width: 700px;
+    font-size: 10px;
+  }
+
+  #charting h1 {
+    max-width: 400px;
+  }
+
+  #charting #action-list button {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  #settings {
+    margin-left: 5px;
+  }
+
+  #settings input {
+    max-width: 300px;
+  }
+
+  #welcome-text {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  #body-4 h1 {
+    font-size: 70px;
+
+  }
+
+  .goal-list button {
+    width: 300px;
+    font-size: 30px;
+  }
+
+
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .top-bar {
+    height: 13%;
+  }
+
+
+}

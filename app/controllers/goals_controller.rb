@@ -1,5 +1,5 @@
 class GoalsController < ApplicationController
-    skip_before_action :verify_authenticity_token
+  skip_before_action :verify_authenticity_token
 
   def index
     @goals = Goal.all
@@ -14,7 +14,7 @@ class GoalsController < ApplicationController
   end
 
   def log
-      @inputs = Input.where(:user_id => current_user.id)
+    @inputs = Input.where(:user_id => current_user.id)
   end
 
 
