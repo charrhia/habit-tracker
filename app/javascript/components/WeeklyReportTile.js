@@ -16,15 +16,15 @@ class WeeklyReportTile extends Component {
     let goals = this.props.goals;
     let inputs = this.props.inputs;
 
-    const data = [
 
-      {name: Object.keys(inputs)[0], 'Day 1': inputs[Object.keys(inputs)[0]]},
+    const data = [
       {name: Object.keys(inputs)[1], 'Day 2': inputs[Object.keys(inputs)[1]]},
       {name: Object.keys(inputs)[2], 'Day 3': inputs[Object.keys(inputs)[2]]},
       {name: Object.keys(inputs)[3], 'Day 4': inputs[Object.keys(inputs)[3]]},
       {name: Object.keys(inputs)[4], 'Day 5': inputs[Object.keys(inputs)[4]]},
       {name: Object.keys(inputs)[5], 'Day 6': inputs[Object.keys(inputs)[5]]},
-      {name: Object.keys(inputs)[6], 'Day 7': inputs[Object.keys(inputs)[6]]}
+      {name: Object.keys(inputs)[6], 'Day 7': inputs[Object.keys(inputs)[6]]},
+      {name: Object.keys(inputs)[7], 'Day 1': inputs[Object.keys(inputs)[7]]},
     ];
 
 

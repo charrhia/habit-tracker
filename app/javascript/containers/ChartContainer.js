@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import WeeklyReportTile from '../components/WeeklyReportTile';
+import DailyReportTile from '../components/DailyReportTile';
+import MonthlyReportTile from '../components/MonthlyReportTile';
 
 class ChartContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
       goals: {},
-      inputs: {}
+      dayInputs: {},
+      weekInputs: {},
+      monthInputs: {}
     }
   }
 
@@ -30,13 +34,28 @@ componentDidMount() {
       this.setState({ goals: body })
     })
 
-    fetch(`/api/v1/inputs.json`)
+    fetch(`/api/v1/inputs/day.json`)
     .then(response => {
       return response.json()
     })
     .then(body => {
-      this.setState({ inputs: body })
+      this.setState({ dayInputs: body })
     })
+    fetch(`/api/v1/inputs/week.json`)
+    .then(response => {
+      return response.json()
+    })
+    .then(body => {
+      this.setState({ weekInputs: body })
+    })
+    fetch(`/api/v1/inputs/month.json`)
+    .then(response => {
+      return response.json()
+    })
+    .then(body => {
+      this.setState({ monthInputs: body })
+    })
+
     .catch(error => console.error(`Error in fetch: ${error.message}`));
 }
 
@@ -45,7 +64,9 @@ componentDidMount() {
   render() {
 
 let goals = this.state.goals;
-let inputs = this.state.inputs;
+let dayInputs = this.state.dayInputs;
+let weekInputs = this.state.weekInputs;
+
 
     return(
 
@@ -62,8 +83,17 @@ let inputs = this.state.inputs;
 
         <WeeklyReportTile
           goals={goals}
-          inputs={inputs}
+          inputs={dayInputs}
          />
+
+
+        <MonthlyReportTile
+
+        />
+
+        <DailyReportTile
+
+        />
 
 
       </div>

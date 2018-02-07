@@ -29,7 +29,7 @@ feature 'navbar' do
     expect(page).to have_content('Signed in successfully')
     expect(page).to have_link('Goals')
     expect(page).to have_link('Settings')
-    expect(page).to have_link('Dashboard')
+    expect(page).to have_link('Reports')
     expect(page).to have_link('Sign Out')
   end
 
