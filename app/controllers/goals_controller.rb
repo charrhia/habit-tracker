@@ -14,6 +14,7 @@ class GoalsController < ApplicationController
   end
 
   def log
+
     @inputs = Input.where(:user_id => current_user.id)
   end
 
@@ -42,7 +43,6 @@ class GoalsController < ApplicationController
 
   def show
     @goals = Goal.all
-
     @inputs = Input.all
   end
 
