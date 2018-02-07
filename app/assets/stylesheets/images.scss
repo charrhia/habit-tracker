@@ -6,7 +6,7 @@ body {
 
 
 .body-1 {
-  background-image: url('splash.jpg');
+  background-image: image-url('splash.jpg');
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
   height: 80%;
@@ -14,14 +14,14 @@ body {
 
 
 .body-3 {
-  background-image: url('coffee.jpg');
+  background-image: image-url('coffee.jpg');
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
   height: 100%;
 }
 
 .body-4 {
-  background-image: url('home.jpg');
+  background-image: image-url('home.jpg');
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
   height: 100%;
