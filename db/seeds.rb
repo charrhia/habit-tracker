@@ -7,18 +7,18 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-goals = [
-  {name: "Eat Healthy"},
-  {name: "Code"},
-  {name: "Call Friends & Family"},
-  {name: "Stick to Budget"},
-  {name: "Exercise"},
-  {name: "Read"},
-  {name: "Clean"},
-  {name: "Attend a Networking Event"},
-  {name: "Meditate"},
-  {name: "Wake up at 5AM"}
-]
+# goals = [
+#   {name: "Eat Healthy"},
+#   {name: "Code"},
+#   {name: "Call Friends & Family"},
+#   {name: "Stick to Budget"},
+#   {name: "Exercise"},
+#   {name: "Read"},
+#   {name: "Clean"},
+#   {name: "Attend a Networking Event"},
+#   {name: "Meditate"},
+#   {name: "Wake up at 5AM"}
+# ]
 
 
 inputs = [
@@ -148,7 +148,7 @@ inputs.each do |input|
   Input.create(input)
 end
 
-
-goals.each do |goal|
-  Goal.create(goal)
-end
+# 
+# goals.each do |goal|
+#   Goal.create(goal)
+# end

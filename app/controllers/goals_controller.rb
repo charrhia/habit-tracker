@@ -1,4 +1,5 @@
 class GoalsController < ApplicationController
+    skip_before_action :verify_authenticity_token
 
   def index
     @goals = Goal.all
@@ -7,24 +8,19 @@ class GoalsController < ApplicationController
     @inputs = Input.all
     @input = Input.new
 
-
-
-# for select drop down
-    @goal_options = Goal.all.map{ |goal| [ goal.name, goal.id ] }
-
-
+    # for select drop down
+    @user_goals = Goal.where(:user_id => current_user.id)
+    @goal_options = @user_goals.map{ |goal| [ goal.name, goal.id ] }
   end
 
   def log
-    @inputs = Input.all
+      @inputs = Input.where(:user_id => current_user.id)
   end
 
 
-
-
   def new
-    @goals = Goal.all
     @goal = Goal.new
+    @goals = Goal.where(:user_id => current_user.id)
 
     @inputs = Input.all
     @input = Input.new
@@ -34,6 +30,7 @@ class GoalsController < ApplicationController
   def create
     @goals = Goal.all
     @goal = Goal.new(goal_params)
+
 
     if @goal.save
       flash[:notice] = "Goal saved successfully!"
@@ -45,6 +42,7 @@ class GoalsController < ApplicationController
 
   def show
     @goals = Goal.all
+
     @inputs = Input.all
   end
 
@@ -59,13 +57,11 @@ class GoalsController < ApplicationController
   end
 
 
-
-
   private
 
 
   def goal_params
-    params.require(:goal).permit(:name)
+    params.require(:goal).permit(:name, :user_id)
   end
 
 end

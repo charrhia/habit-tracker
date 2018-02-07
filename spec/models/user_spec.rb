@@ -1,5 +1,11 @@
 require 'rails_helper'
 
+RSpec.configure do |config|
+  config.include(Shoulda::Matchers::ActiveRecord, type: :model)
+end
+
+
+
 RSpec.describe User, type: :model do
 
   it { should have_valid(:email).when('jsnow@gmail.com') }
@@ -13,4 +19,13 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
     expect(user.errors[:password_confirmation]).to_not be_blank
   end
+end
+
+
+
+RSpec.describe User, type: :model do
+
+  it { should have_many :inputs }
+  it { should have_many :goals }
+
 end
