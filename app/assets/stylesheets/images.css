@@ -12,12 +12,6 @@ body {
   height: 80%;
 }
 
-.body-2 {
-  background-image: url('chart.jpg');
-  background-size: cover;
-  font-family: 'Quicksand', sans-serif;
-  height: 100%;
-}
 
 .body-3 {
   background-image: url('coffee.jpg');

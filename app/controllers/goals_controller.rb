@@ -47,7 +47,10 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    @goals = Goal.all
+    # @goals = Goal.all
+
+    @goals = Goal.where(:user_id => current_user.id)
+
     @goal = Goal.find(params[:id])
     if @goal.destroy
       render '/goals/new'
