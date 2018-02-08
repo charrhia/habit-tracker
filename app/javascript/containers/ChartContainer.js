@@ -12,12 +12,13 @@ class ChartContainer extends Component {
       weekInputs: {},
       monthInputs: {}
     }
+    this.handleDailyClick = this.handleDailyClick.bind(this)
+    this.handleWeeklyClick = this.handleWeeklyClick.bind(this)
+    this.handleMonthlyClick = this.handleMonthlyClick.bind(this)
   }
 
-
-// goals and inputs fetch
-componentDidMount() {
-  fetch(`/api/v1/goals.json`)
+  componentDidMount() {
+    fetch(`/api/v1/goals.json`)
     .then(response => {
       if (response.ok) {
         return response;
@@ -34,65 +35,84 @@ componentDidMount() {
       this.setState({ goals: body })
     })
 
-    fetch(`/api/v1/inputs/day.json`)
-    .then(response => {
-      return response.json()
-    })
-    .then(body => {
-      this.setState({ dayInputs: body })
-    })
-    fetch(`/api/v1/inputs/week.json`)
-    .then(response => {
-      return response.json()
-    })
-    .then(body => {
-      this.setState({ weekInputs: body })
-    })
-    fetch(`/api/v1/inputs/month.json`)
-    .then(response => {
-      return response.json()
-    })
-    .then(body => {
-      this.setState({ monthInputs: body })
-    })
-
     .catch(error => console.error(`Error in fetch: ${error.message}`));
 }
+
+
+handleDailyClick() {
+  fetch(`/api/v1/inputs/day.json`)
+  .then(response => {
+    if (response.ok) {
+      return response;
+    }
+  })
+  .then(response => response.json())
+  .then(body => {
+    this.setState({dayInputs: body})
+  })
+}
+
+handleWeeklyClick() {
+  fetch(`/api/v1/inputs/week.json`)
+  .then(response => {
+    if (response.ok) {
+      return response;
+    }
+  })
+  .then(response => response.json())
+  .then(body => {
+    this.setState({weekInputs: body})
+  })
+}
+
+handleMonthlyClick() {
+  fetch(`/api/v1/inputs/month.json`)
+  .then(response => {
+    if (response.ok) {
+      return response;
+    }
+  })
+  .then(response => response.json())
+  .then(body => {
+    this.setState({monthInputs: body})
+  })
+}
+
+
+
 
 
 
   render() {
 
 let goals = this.state.goals;
-let dayInputs = this.state.dayInputs;
-let weekInputs = this.state.weekInputs;
-
 
     return(
 
       <div id="charting">
         <h1>Analytics</h1>
+        <div id="chart-msg"><p>Click each button to pull current report</p></div>
 
         <div id="action-list">
 
-          <button>Daily Report</button>
-          <button>Weekly Report</button>
-          <button>Monthly Report</button>
+          <button onClick={this.handleDailyClick}>Daily Report</button>
+
+          <button onClick={this.handleWeeklyClick}>Weekly Report</button>
+
+          <button onClick={this.handleMonthlyClick}>Monthly Report</button>
 
         </div>
 
         <WeeklyReportTile
-          goals={goals}
-          inputs={dayInputs}
+          inputs={this.state.weekInputs}
          />
 
-
-        <MonthlyReportTile
-
+         <MonthlyReportTile
+           inputs={this.state.monthInputs}
         />
 
         <DailyReportTile
-
+          inputs={this.state.dayInputs}
         />
 
 
