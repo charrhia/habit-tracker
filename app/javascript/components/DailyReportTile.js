@@ -13,13 +13,21 @@ class DailyReportTile extends Component {
 
   render() {
 
-
-
+    let goals = this.props.goals;
     let inputs = this.props.inputs;
 
     const data = [
-      {name: "Goal 1", 'Goal 1': 2}
+      {name: "Goal", 'Goal': 1},
     ];
+
+
+// this.props.goals["goals"]
+// // this.props.inputs["inputs"]
+// this.props.inputs["inputs"][0].goal_id
+
+    // const data = [
+    //   {name: Object.keys(inputs)[1], 'Goal 1': 2}
+    // ];
 
 
     return(
@@ -35,12 +43,12 @@ class DailyReportTile extends Component {
             <Tooltip />
             <Legend />
           <Bar dataKey='Goal 1' fill="#87AC4E" />
-          {/* <Bar dataKey="Day 2" fill="#d884c7" />
-          <Bar dataKey="Day 3" fill="#0066ff" />
-          <Bar dataKey="Day 4" fill="#cccc00" />
-          <Bar dataKey="Day 5" fill="#ff5050" />
-          <Bar dataKey="Day 6" fill="#00ffff" />
-          <Bar dataKey="Day 7" fill="#ff9900" /> */}
+          <Bar dataKey="Goal 2" fill="#d884c7" />
+          <Bar dataKey="Goal 3" fill="#0066ff" />
+          <Bar dataKey="Goal 4" fill="#cccc00" />
+          <Bar dataKey="Goal 5" fill="#ff5050" />
+          <Bar dataKey="Goal 6" fill="#00ffff" />
+          <Bar dataKey="Goal 7" fill="#ff9900" />
         </BarChart>
 
       </div>

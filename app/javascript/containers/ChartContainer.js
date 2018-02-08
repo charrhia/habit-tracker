@@ -105,14 +105,17 @@ let goals = this.state.goals;
 
         <WeeklyReportTile
           inputs={this.state.weekInputs}
+          goals={this.state.goals}
          />
 
          <MonthlyReportTile
            inputs={this.state.monthInputs}
+          goals={this.state.goals}
         />
 
         <DailyReportTile
           inputs={this.state.dayInputs}
+          goals={this.state.goals}
         />
 
 
