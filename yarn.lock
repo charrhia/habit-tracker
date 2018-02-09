@@ -5649,6 +5649,12 @@ react-addons-test-utils@~15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
 
+react-chartist@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/react-chartist/-/react-chartist-0.13.1.tgz#79cee44891dfd7008d555a7a5a623ab09c0b59d1"
+  dependencies:
+    prop-types "^15.5.8"
+
 react-dom@~15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.4.2.tgz#015363f05b0a1fd52ae9efdd3a0060d90695208f"

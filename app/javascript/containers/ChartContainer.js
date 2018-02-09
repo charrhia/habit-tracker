@@ -3,12 +3,14 @@ import WeeklyReportTile from '../components/WeeklyReportTile';
 import DailyReportTile from '../components/DailyReportTile';
 import MonthlyReportTile from '../components/MonthlyReportTile';
 
+
+
 class ChartContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      goals: {},
-      dayInputs: {},
+      goals: {goals: []},
+      dayInputs: {inputs: []},
       weekInputs: {},
       monthInputs: {}
     }
@@ -52,6 +54,7 @@ handleDailyClick() {
   })
 }
 
+
 handleWeeklyClick() {
   fetch(`/api/v1/inputs/week.json`)
   .then(response => {
@@ -80,12 +83,29 @@ handleMonthlyClick() {
 
 
 
-
-
-
   render() {
 
+
+
 let goals = this.state.goals;
+
+
+// if (this.state.inputs) {
+//   let inputs = this.state.inputs;
+
+// let newArray = inputs.map((input) => {
+//   return(
+//     <DataTile
+//       id={input.id}
+//       key={input.key}
+//       goal={input.goal_id}
+//       time={input.created_at}
+//     />
+//   )
+// })
+// }
+
+
 
     return(
 
@@ -101,7 +121,16 @@ let goals = this.state.goals;
 
           <button onClick={this.handleMonthlyClick}>Monthly Report</button>
 
+
         </div>
+
+
+
+
+        <DailyReportTile
+          inputs={this.state.dayInputs}
+          goals={this.state.goals}
+        />
 
         <WeeklyReportTile
           inputs={this.state.weekInputs}
@@ -113,10 +142,6 @@ let goals = this.state.goals;
           goals={this.state.goals}
         />
 
-        <DailyReportTile
-          inputs={this.state.dayInputs}
-          goals={this.state.goals}
-        />
 
 
       </div>
