@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DataTile from '../components/DataTile'
 
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar} from 'recharts';
 
@@ -7,6 +8,7 @@ class DailyReportTile extends Component {
   constructor(props) {
     super(props);
     this.state = {
+
     }
   }
 
@@ -16,18 +18,31 @@ class DailyReportTile extends Component {
     let goals = this.props.goals;
     let inputs = this.props.inputs;
 
+    console.log(this.props.inputs)
+
     const data = [
-      {name: "Goal", 'Goal': 1},
+      {name: "Goal", 'Goal': 3},
     ];
 
 
-// this.props.goals["goals"]
-// // this.props.inputs["inputs"]
-// this.props.inputs["inputs"][0].goal_id
 
-    // const data = [
-    //   {name: Object.keys(inputs)[1], 'Goal 1': 2}
-    // ];
+    // goal label
+
+    let mappedInputs = inputs.inputs.map((input) => {
+      return input.goal_id
+    })
+
+    let mappedGoals = goals.goals.map((goal) => {
+      return goal.name
+    })
+
+    //
+    // let mappedData = inputs.inputs.map((input) => {
+    //   return (<p key={`${input.id}_${input.goal_id}`}>
+    //
+    //   </p>
+    // )
+    // })
 
 
     return(
@@ -39,16 +54,30 @@ class DailyReportTile extends Component {
         <BarChart width={700} height={250} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
-            <YAxis />
+            <YAxis dataKey="timestamp" />
             <Tooltip />
             <Legend />
-          <Bar dataKey='Goal 1' fill="#87AC4E" />
-          <Bar dataKey="Goal 2" fill="#d884c7" />
-          <Bar dataKey="Goal 3" fill="#0066ff" />
-          <Bar dataKey="Goal 4" fill="#cccc00" />
-          <Bar dataKey="Goal 5" fill="#ff5050" />
-          <Bar dataKey="Goal 6" fill="#00ffff" />
-          <Bar dataKey="Goal 7" fill="#ff9900" />
+            {/* {
+              line.map((id) => {
+                return (<Bar key={`line_${id}`} dataKey={`${id}_value`} />)
+              })
+            } */}
+
+            {
+              goals.goals.map((goal) => {
+                return (<Bar key={`${goal.name}`} dataKey={`${goal.name}`} />)
+              })
+            }
+
+
+            {/* {
+              inputs.inputs.map((input) => {
+                return (<Bar key={`Goal ID: ${input.goal_id}`} dataKey={`Goal ID: ${input.goal_id}`} />)
+              })
+            } */}
+
+
+          {/* <Bar dataKey='Goal 1' fill="#87AC4E" /> */}
         </BarChart>
 
       </div>
