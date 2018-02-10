@@ -18,16 +18,6 @@ class DailyReportTile extends Component {
     let goals = this.props.goals;
     let inputs = this.props.inputs;
 
-    console.log(this.props.inputs)
-
-    const data = [
-      {name: "Goal", 'Goal': 3},
-    ];
-
-
-
-    // goal label
-
     let mappedInputs = inputs.inputs.map((input) => {
       return input.goal_id
     })
@@ -36,13 +26,10 @@ class DailyReportTile extends Component {
       return goal.name
     })
 
-    //
-    // let mappedData = inputs.inputs.map((input) => {
-    //   return (<p key={`${input.id}_${input.goal_id}`}>
-    //
-    //   </p>
-    // )
-    // })
+    let mappedData = inputs.inputs.map(input => (
+      {name: input.goal_id, accomplished: 1}
+    ));
+
 
 
     return(
@@ -51,33 +38,20 @@ class DailyReportTile extends Component {
 
         <h2>Daily Report</h2>
 
-        <BarChart width={700} height={250} data={data}>
+        <BarChart width={750} height={250} data={mappedData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
-            <YAxis dataKey="timestamp" />
+            <YAxis />
             <Tooltip />
             <Legend />
-            {/* {
-              line.map((id) => {
-                return (<Bar key={`line_${id}`} dataKey={`${id}_value`} />)
-              })
-            } */}
 
+            <Bar dataKey="accomplished" fill="#87AC4E" />
             {
               goals.goals.map((goal) => {
-                return (<Bar key={`${goal.name}`} dataKey={`${goal.name}`} />)
+                return (<Bar dataKey={`${goal.id} - ${goal.name}`} fill="#00BFFF" />)
               })
             }
 
-
-            {/* {
-              inputs.inputs.map((input) => {
-                return (<Bar key={`Goal ID: ${input.goal_id}`} dataKey={`Goal ID: ${input.goal_id}`} />)
-              })
-            } */}
-
-
-          {/* <Bar dataKey='Goal 1' fill="#87AC4E" /> */}
         </BarChart>
 
       </div>
