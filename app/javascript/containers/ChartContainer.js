@@ -86,25 +86,7 @@ handleMonthlyClick() {
   render() {
 
 
-
 let goals = this.state.goals;
-
-
-// if (this.state.inputs) {
-//   let inputs = this.state.inputs;
-
-// let newArray = inputs.map((input) => {
-//   return(
-//     <DataTile
-//       id={input.id}
-//       key={input.key}
-//       goal={input.goal_id}
-//       time={input.created_at}
-//     />
-//   )
-// })
-// }
-
 
 
     return(
@@ -116,16 +98,10 @@ let goals = this.state.goals;
         <div id="action-list">
 
           <button onClick={this.handleDailyClick}>Daily Report</button>
-
           <button onClick={this.handleWeeklyClick}>Weekly Report</button>
-
           <button onClick={this.handleMonthlyClick}>Monthly Report</button>
 
-
         </div>
-
-
-
 
         <DailyReportTile
           inputs={this.state.dayInputs}
@@ -141,8 +117,6 @@ let goals = this.state.goals;
            inputs={this.state.monthInputs}
           goals={this.state.goals}
         />
-
-
 
       </div>
     )
