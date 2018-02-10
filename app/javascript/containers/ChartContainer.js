@@ -11,8 +11,8 @@ class ChartContainer extends Component {
     this.state = {
       goals: {goals: []},
       dayInputs: {inputs: []},
-      weekInputs: {},
-      monthInputs: {}
+      weekInputs: {inputs: []},
+      monthInputs: {inputs: []}
     }
     this.handleDailyClick = this.handleDailyClick.bind(this)
     this.handleWeeklyClick = this.handleWeeklyClick.bind(this)
