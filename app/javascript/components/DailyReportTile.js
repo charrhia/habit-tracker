@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DataTile from '../components/DataTile'
 
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar} from 'recharts';
 
