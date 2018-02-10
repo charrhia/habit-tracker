@@ -6,9 +6,13 @@
 
       <ul>
         <% @goals.each do |goal| %>
-        <button><%= goal.name %>
+        <button>
 
-          <%= link_to '[x]',  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %></button>
+          <%= link_to '<i class="fas fa-times"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
+
+          <%= goal.name %>
+
+        </button>
           <% end %>
       </ul>
 
