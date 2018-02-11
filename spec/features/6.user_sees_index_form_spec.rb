@@ -3,7 +3,6 @@ require 'rails_helper'
 feature 'journal index page' do
 
   scenario 'I should be able to successfully record data for a goal' do
-
     visit new_user_registration_path
 
     fill_in 'Email', with: 'john@example.com'

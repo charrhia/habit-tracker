@@ -1,28 +1,24 @@
 <div class="body-1">
 
-<div class="intro-container">
-  <div id="intro">
-    <h2>
-      <p>What did you accomplish today?</p>
-    </h2>
+  <div class="intro-container">
+    <div id="intro">
+      <h2>
+        <p>What did you accomplish today?</p>
+      </h2>
+    </div>
   </div>
-</div>
   <p id="direct-msg">Want to start tracking new goals? Click <a href="/goals/new">here</a></p>
 
+  <div class="form-container">
 
-
-<div class="form-container">
-
-  <div class="form-things">
-
+    <div class="form-things">
       <%= form_for(@input) do |f| %>
 
       <div class="field">
-
         <%- flash.each do |key, value| -%>
-          <div id="flash" class="flash flash-<%= key %>">
-            <%= value %>
-          </div>
+        <div id="flash" class="flash flash-<%= key %>">
+          <%= value %>
+        </div>
         <%- end -%>
 
         <%= f.label :goal_id %><br />
@@ -30,18 +26,16 @@
       </div>
 
       <% if current_user %>
-          <%= f.hidden_field :user_id, value: current_user.id%>
+      <%= f.hidden_field :user_id, value: current_user.id%>
       <% end %>
 
       <div class="submit">
         <%= f.submit 'Submit' %><i class="fas fa-check" id="icon"></i>
       </div>
 
-    <% end %>
-
+      <% end %>
     </form>
 
   </div>
-
-  </div>
+</div>
 </div>

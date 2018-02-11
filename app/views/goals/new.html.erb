@@ -1,30 +1,21 @@
 <div class="body-3">
 
   <div class="goal-list">
-
     <h3>Here is a list of your goals. Would you like to update?</h3>
-
       <ul>
         <% @goals.each do |goal| %>
         <button>
 
           <%= link_to '<i class="fas fa-times"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
-
           <%= goal.name %>
-
         </button>
           <% end %>
       </ul>
-
   </div>
 
-
   <div class="form-container">
-
     <div class="form-things">
-
       <%= form_for(@goal) do |f| %>
-
 
       <div class="field">
 
@@ -34,11 +25,9 @@
           </div>
         <%- end -%>
 
-
         <%= f.label :name, 'Goal:' %><br />
         <%= f.text_field :name %>
       </div>
-
       <br />
 
         <% if current_user %>
@@ -50,10 +39,6 @@
       </div>
 
       <% end %>
-
-
     </div>
-
   </div>
-
 </div>

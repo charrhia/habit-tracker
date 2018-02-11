@@ -13,7 +13,6 @@ feature 'navbar' do
 
     expect(page).to have_content('Habit Tracker')
     expect(page).to have_current_path('/goals')
-
   end
 
   scenario 'I want to see a list of user actions' do

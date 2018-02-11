@@ -8,16 +8,13 @@ class GoalsController < ApplicationController
     @inputs = Input.all
     @input = Input.new
 
-    # for select drop down
     @user_goals = Goal.where(:user_id => current_user.id)
     @goal_options = @user_goals.map{ |goal| [goal.name, goal.id] }
   end
 
   def log
-
     @inputs = Input.where(:user_id => current_user.id)
   end
-
 
   def new
     @goal = Goal.new
@@ -25,16 +22,14 @@ class GoalsController < ApplicationController
 
     @inputs = Input.all
     @input = Input.new
-
   end
 
   def create
     @goals = Goal.all
     @goal = Goal.new(goal_params)
 
-
     if @goal.save
-      flash[:notice] = "Goal saved successfully!"
+      flash[:notice] = 'Goal saved successfully!'
       redirect_to '/goals/new'
     else
       render '/goals/new'
@@ -47,8 +42,6 @@ class GoalsController < ApplicationController
   end
 
   def destroy
-    # @goals = Goal.all
-
     @goals = Goal.where(:user_id => current_user.id)
 
     @goal = Goal.find(params[:id])
@@ -59,10 +52,7 @@ class GoalsController < ApplicationController
     end
   end
 
-
   private
-
-
   def goal_params
     params.require(:goal).permit(:name, :user_id)
   end

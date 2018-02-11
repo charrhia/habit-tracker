@@ -3,8 +3,6 @@ import WeeklyReportTile from '../components/WeeklyReportTile';
 import DailyReportTile from '../components/DailyReportTile';
 import MonthlyReportTile from '../components/MonthlyReportTile';
 
-
-
 class ChartContainer extends Component {
   constructor(props) {
     super(props);
@@ -78,7 +76,6 @@ handleMonthlyClick() {
   render() {
 
     return(
-
       <div id="charting">
         <h1>Analytics</h1>
         <div id="chart-msg">

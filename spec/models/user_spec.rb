@@ -5,7 +5,6 @@ RSpec.configure do |config|
 end
 
 RSpec.describe User, type: :model do
-
   it { should have_valid(:email).when('jsnow@gmail.com') }
   it { should_not have_valid(:email).when(nil, '', 'jsnow') }
 
@@ -20,7 +19,6 @@ RSpec.describe User, type: :model do
 end
 
 RSpec.describe User, type: :model do
-
   it { should have_many :inputs }
   it { should have_many :goals }
 end
