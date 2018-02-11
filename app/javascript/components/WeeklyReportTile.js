@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react'
 
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar} from 'recharts';
 
 
-class WeeklyReportTile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
+const WeeklyReportTile = (props) => {
 
 
-  render() {
+    let goals = props.goals;
+    let inputs = props.inputs;
 
-    let goals = this.props.goals;
-    let inputs = this.props.inputs;
-
-
-    let mappedInputs = inputs.inputs.map((input) => {
-      return input.goal_id
-    })
+    // let mappedInputs = inputs.inputs.map((input) => {
+    //   return input.goal_id
+    // })
 
     let mappedGoals = goals.goals.map((goal) => {
       return goal.name
@@ -28,17 +20,6 @@ class WeeklyReportTile extends Component {
     let mappedData = inputs.inputs.map(input => (
       {name: input.goal_id, accomplished: 1}
     ));
-
-
-    // const data = [
-    //   {name: Object.keys(inputs)[1], 'Day 2': inputs[Object.keys(inputs)[1]]},
-    //   {name: Object.keys(inputs)[2], 'Day 3': inputs[Object.keys(inputs)[2]]},
-    //   {name: Object.keys(inputs)[3], 'Day 4': inputs[Object.keys(inputs)[3]]},
-    //   {name: Object.keys(inputs)[4], 'Day 5': inputs[Object.keys(inputs)[4]]},
-    //   {name: Object.keys(inputs)[5], 'Day 6': inputs[Object.keys(inputs)[5]]},
-    //   {name: Object.keys(inputs)[6], 'Day 7': inputs[Object.keys(inputs)[6]]},
-    //   {name: Object.keys(inputs)[7], 'Day 1': inputs[Object.keys(inputs)[7]]},
-    // ];
 
 
     return(
@@ -81,6 +62,6 @@ class WeeklyReportTile extends Component {
 
       </div>
     )
-  }}
+  }
 
   export default WeeklyReportTile;

@@ -4,6 +4,4 @@ class Api::V1::GoalsController < ApplicationController
     goal = Goal.all
     render json: goal
   end
-
-
 end

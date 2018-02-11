@@ -7,8 +7,8 @@ end
 
 
 RSpec.describe Goal do
-  describe "goal model creation" do
-    it "returns list of goals" do
+  describe 'goal model creation' do
+    it 'returns list of goals' do
 
       user_2 = FactoryBot.create(:user)
 
