@@ -36,10 +36,8 @@ class ChartContainer extends Component {
     .then(body => {
       this.setState({ goals: body })
     })
-
     .catch(error => console.error(`Error in fetch: ${error.message}`));
 }
-
 
 handleDailyClick() {
   fetch(`/api/v1/inputs/day.json`)
@@ -51,9 +49,7 @@ handleDailyClick() {
   .then(response => response.json())
   .then(body => {
     this.setState({dayInputs: body})
-  })
-}
-
+  })};
 
 handleWeeklyClick() {
   fetch(`/api/v1/inputs/week.json`)
@@ -65,8 +61,7 @@ handleWeeklyClick() {
   .then(response => response.json())
   .then(body => {
     this.setState({weekInputs: body})
-  })
-}
+  })};
 
 handleMonthlyClick() {
   fetch(`/api/v1/inputs/month.json`)
@@ -78,29 +73,22 @@ handleMonthlyClick() {
   .then(response => response.json())
   .then(body => {
     this.setState({monthInputs: body})
-  })
-}
-
-
+  })};
 
   render() {
-
-
-let goals = this.state.goals;
-
 
     return(
 
       <div id="charting">
         <h1>Analytics</h1>
-        <div id="chart-msg"><p>Click each button to pull current report</p></div>
+        <div id="chart-msg">
+          <p>Click each button to pull current report</p>
+        </div>
 
         <div id="action-list">
-
           <button onClick={this.handleDailyClick}>Daily Report</button>
           <button onClick={this.handleWeeklyClick}>Weekly Report</button>
           <button onClick={this.handleMonthlyClick}>Monthly Report</button>
-
         </div>
 
         <DailyReportTile
@@ -114,10 +102,9 @@ let goals = this.state.goals;
          />
 
          <MonthlyReportTile
-           inputs={this.state.monthInputs}
+          inputs={this.state.monthInputs}
           goals={this.state.goals}
         />
-
       </div>
     )
   }}
