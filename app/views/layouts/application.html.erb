@@ -22,28 +22,22 @@
     <a href="/goals"><h1 id="title">Habit Tracker<p id="subheader">Your daily journal for maintaining healthy habits</p></h1></a>
   </ul>
 
-
   <ul class="side-area">
     <%- if current_user -%>
-
     <a href="/goals">Home</a></li>
     <a href="/goals/dashboard">Reports</a>
     <a href="/goals/new">Goals</a>
     <a href="/log">Log</a>
-
     <%= link_to 'Settings', edit_user_registration_path %>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <%- else -%>
-
       <%= link_to 'Sign Up', new_user_registration_path %>
       <%= link_to 'Sign In', new_user_session_path %>
     <%- end -%>
   </ul>
 </nav>
 
-
     <%= yield %>
-
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= yield :extra_footer %>

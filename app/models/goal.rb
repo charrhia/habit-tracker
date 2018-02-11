@@ -3,6 +3,4 @@ class Goal < ApplicationRecord
 
   has_many :inputs
   belongs_to :user
-
-
 end

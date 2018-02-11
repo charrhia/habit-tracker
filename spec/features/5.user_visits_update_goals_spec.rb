@@ -2,8 +2,7 @@ require 'rails_helper'
 
 feature 'update goals page' do
 
-  scenario 'i should be directed to the /goals/new page when clicking on Update Goals' do
-
+  scenario 'i should be directed to the /goals/new page by Update Goals' do
     visit new_user_registration_path
 
     fill_in 'Email', with: 'jane@example.com'
@@ -19,11 +18,9 @@ feature 'update goals page' do
 
     expect(page).to have_content('Eat Healthy')
     expect(page).to have_current_path('/goals/new')
-
   end
 
   scenario 'I should be able to delete each goal' do
-
     visit new_user_registration_path
 
     fill_in 'Email', with: 'jane@example.com'

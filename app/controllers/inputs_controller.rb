@@ -1,5 +1,4 @@
 class InputsController < ApplicationController
-
   def index
     @goal = Goal.find(params[:goal_id])
 
@@ -18,12 +17,11 @@ class InputsController < ApplicationController
     input = Input.new(input_params)
 
     if input.save
-      flash[:notice] = "Journal updated"
+      flash[:notice] = 'Journal updated'
       redirect_to '/goals'
     else
       render json: { error: input.errors.full_messages }, status: :unprocessable_entity
     end
-
   end
 
   def log
