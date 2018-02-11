@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'navbar' do
-
   scenario 'the header should link back to index' do
     visit new_user_registration_path
 
@@ -32,5 +31,4 @@ feature 'navbar' do
     expect(page).to have_link('Reports')
     expect(page).to have_link('Sign Out')
   end
-
 end

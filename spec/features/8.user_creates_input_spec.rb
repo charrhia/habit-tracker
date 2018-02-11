@@ -2,8 +2,6 @@
 require 'rails_helper'
 
 feature 'Input creation' do
-
-
   scenario 'I want to successfully create input data' do
 
     goal = Goal.create(name: "Work Out")
@@ -11,6 +9,5 @@ feature 'Input creation' do
 
     expect(goal.name).to eq("Work Out")
     expect(input.goal_id).to eq(1)
-
   end
 end

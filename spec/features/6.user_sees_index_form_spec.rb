@@ -2,7 +2,6 @@ require 'rails_helper'
 
 feature 'journal index page' do
 
-
   scenario 'I should be able to successfully record data for a goal' do
 
     visit new_user_registration_path
@@ -25,6 +24,5 @@ feature 'journal index page' do
 
     expect(page).to have_content('Journal updated')
     expect(page).to have_current_path('/goals')
-
   end
 end

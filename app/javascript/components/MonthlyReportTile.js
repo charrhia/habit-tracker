@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react'
 
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis} from 'recharts';
 
 
-class MonthlyReportTile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
+const MonthlyReportTile = (props) => {
 
 
-  render() {
+    let goals = props.goals;
+    let inputs = props.inputs;
 
-    let goals = this.props.goals;
-    let inputs = this.props.inputs;
-
-
-    let mappedInputs = inputs.inputs.map((input) => {
-      return input.goal_id
-    })
+    // let mappedInputs = inputs.inputs.map((input) => {
+    //   return input.goal_id
+    // })
 
     let mappedGoals = goals.goals.map((goal) => {
       return goal.name
@@ -55,6 +47,6 @@ class MonthlyReportTile extends Component {
 
       </div>
     )
-  }}
+  }
 
   export default MonthlyReportTile;

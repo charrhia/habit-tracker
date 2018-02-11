@@ -10,7 +10,7 @@ class GoalsController < ApplicationController
 
     # for select drop down
     @user_goals = Goal.where(:user_id => current_user.id)
-    @goal_options = @user_goals.map{ |goal| [ goal.name, goal.id ] }
+    @goal_options = @user_goals.map{ |goal| [goal.name, goal.id] }
   end
 
   def log
@@ -66,5 +66,4 @@ class GoalsController < ApplicationController
   def goal_params
     params.require(:goal).permit(:name, :user_id)
   end
-
 end

@@ -1,25 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react'
 
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar} from 'recharts';
 
 
-class DailyReportTile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    }
-  }
+const DailyReportTile = (props) => {
 
 
-  render() {
+    let goals = props.goals;
+    let inputs = props.inputs;
 
-    let goals = this.props.goals;
-    let inputs = this.props.inputs;
-
-    let mappedInputs = inputs.inputs.map((input) => {
-      return input.goal_id
-    })
+    // let mappedInputs = inputs.inputs.map((input) => {
+    //   return input.goal_id
+    // })
 
     let mappedGoals = goals.goals.map((goal) => {
       return goal.name
@@ -29,9 +21,8 @@ class DailyReportTile extends Component {
       {name: input.goal_id, accomplished: 1}
     ));
 
-
-
     return(
+
 
       <div id="graphs">
 
@@ -52,9 +43,8 @@ class DailyReportTile extends Component {
             }
 
         </BarChart>
-
       </div>
     )
-  }}
+  }
 
   export default DailyReportTile;

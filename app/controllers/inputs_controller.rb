@@ -5,7 +5,6 @@ class InputsController < ApplicationController
 
     @inputs = @goal.inputs
     @input = Input.new
-
   end
 
   def new
@@ -13,9 +12,7 @@ class InputsController < ApplicationController
 
     @inputs = Input.all
     @input = Input.new
-
   end
-
 
   def create
     input = Input.new(input_params)
@@ -33,10 +30,7 @@ class InputsController < ApplicationController
     @inputs = Input.where(:user_id => current_user.id)
   end
 
-
-
   def input_params
     params.require(:input).permit(:goal_id, :date, :user_id)
   end
-
 end

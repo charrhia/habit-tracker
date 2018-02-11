@@ -44,7 +44,5 @@ feature 'update goals page' do
     # find("button i").click
     # save_and_open_page
     # expect(page).to have_no_content('Eat Healthy')
-
   end
-
 end

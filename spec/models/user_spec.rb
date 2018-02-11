@@ -4,8 +4,6 @@ RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
 end
 
-
-
 RSpec.describe User, type: :model do
 
   it { should have_valid(:email).when('jsnow@gmail.com') }
@@ -21,11 +19,8 @@ RSpec.describe User, type: :model do
   end
 end
 
-
-
 RSpec.describe User, type: :model do
 
   it { should have_many :inputs }
   it { should have_many :goals }
-
 end
