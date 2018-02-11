@@ -5,23 +5,27 @@
 [![Code Climate](https://codeclimate.com/github/charrhia/habit-tracker/badges/gpa.svg)](https://codeclimate.com/github/charrhia/habit-tracker)
 
 # Ruby Version
-# Installation Set Up
-# Hosting
+ruby
+rails
+react
+# Installation 
+```
+bundle install 
+npm install
+rake db:create
+rake db:migrate
+```
+Then navigate to http://localhost:3000 in your browser.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Test Suite
+ ```
+ rake
+ npm test
+ ```
+ # Application Walkthrough
+* A user must create an account and sign in
+* Navigate to the 'Goals' link on the navigation bar or the 'click here' link on the front page in order to set up your desired goals you want to track
+* Record whether you accomplished that goal daily on the main page
+* Assess progress with the daily, weekly, and monthly report functions on your 'Reports' page
+* Click 'Settings' to update user information
+* Enjoy!
