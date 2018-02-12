@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.configure do |config|
   config.include(Shoulda::Matchers::ActiveRecord, type: :model)
@@ -7,10 +7,10 @@ end
 RSpec.describe Goal do
   describe 'goal model creation' do
     it 'returns list of goals' do
-      user_2 = FactoryBot.create(:user)
+      user_variable_three = FactoryBot.create(:user)
 
-      first_goal = Goal.create(name: 'Work Out', user_id: user_2.id)
-      second_goal = Goal.create(name: 'Eat Healthy', user_id: user_2.id)
+      first_goal = Goal.create(name: 'Work Out', user_id: user_variable_three.id)
+      second_goal = Goal.create(name: 'Eat Healthy', user_id: user_variable_three.id)
 
       goals = Goal.all
 
@@ -25,5 +25,5 @@ RSpec.describe Goal, type: :model do
   it { should belong_to :user }
 
   it { should have_valid(:name).when('Work Out') }
-  it { should_not have_valid(:name).when(nil, "") }
+  it { should_not have_valid(:name).when(nil, '') }
 end

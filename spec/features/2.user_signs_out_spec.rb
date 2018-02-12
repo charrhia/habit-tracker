@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'user signs out' do
-
   scenario 'authenticated user signs out' do
     user = FactoryBot.create(:user)
 

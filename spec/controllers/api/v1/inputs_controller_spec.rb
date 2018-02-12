@@ -2,9 +2,14 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::InputsController, type: :controller do
-  user_4 = FactoryBot.create(:user)
-  let!(:first_goal) { Goal.create(name: 'Eat Healthy', user_id: user_4.id) }
-  let!(:first_input) { Input.create(user_id: user_4.id, goal_id: first_goal.id) }
+  user_variable = FactoryBot.create(:user)
+  let!(:first_goal) {
+    Goal.create(name: 'Eat Healthy', user_id: user_variable.id)
+  }
+
+  let!(:first_input) {
+    Input.create(user_id: user_variable.id, goal_id: first_goal.id)
+   }
 
   describe 'GET#index' do
     it 'should return a list of all the inputs' do

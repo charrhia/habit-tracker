@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'update goals page' do
-
   scenario 'i should be directed to the /goals/new page by Update Goals' do
     visit new_user_registration_path
 
