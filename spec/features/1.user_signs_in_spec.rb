@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'user signs in' do
-
   scenario 'specify valid credentials' do
     user = FactoryBot.create(:user)
 
