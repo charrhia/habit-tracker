@@ -23,7 +23,7 @@ Replace `bin/bundle` by running `bundle binstubs bundler --force`, then run this
   end
 end
 
-require "rubygems"
-require "bundler/setup"
+require 'rubygems'
+require 'bundler/setup'
 
 load Gem.bin_path("webpacker", "webpack-dev-server")

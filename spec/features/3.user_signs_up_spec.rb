@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 feature 'user registers' do
-
   scenario 'provide valid registration information' do
     visit new_user_registration_path
 
