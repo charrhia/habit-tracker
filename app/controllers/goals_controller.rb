@@ -41,6 +41,22 @@ class GoalsController < ApplicationController
     @inputs = Input.all
   end
 
+
+  # new code
+
+  def edit
+    @goal = Goal.find(params[:id])
+  end
+
+  def update
+    @goal = Goal.find(params[:id])
+    if @goal.update(goal_params)
+      redirect_to '/goals/new'
+    else
+      render '/goals/new'
+    end
+  end
+
   def destroy
     @goals = Goal.where(:user_id => current_user.id)
 
