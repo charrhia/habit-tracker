@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/goals/dashboard', to: 'goals#dashboard'
   get '/goals/new', to: 'goals#new'
-  get '/log', to: 'goals#log'
+  get '/log', to: 'inputs#log'
 
   devise_for :users
 
@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   resources :goals do
     resources :inputs, only: [:index, :new, :create, :destroy]
   end
-  resources :inputs, only: [:index, :new, :create]
+  resources :inputs, only: [:index, :new, :create, :destroy]
 end

@@ -1,0 +1,18 @@
+
+<div id="log">
+  <h3>Activity Log</h3>
+  <p>Please note that all entry deletions are permanant and will be wiped from your database!<p>
+
+    <ul>
+      <% @inputs.each do |input| %>
+      <button><b>
+
+          <%= link_to '<i class="fas fa-times delete"></i>'.html_safe,  { action: :destroy, id: input.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
+
+
+
+        <%= input.goal.name %><br /></b><br /><%= input.created_at %>
+      </button>
+      <% end %>
+    </ul>
+  </div>

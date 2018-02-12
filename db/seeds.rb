@@ -8,147 +8,50 @@
 
 
 # goals = [
-#   {name: "Eat Healthy"},
-#   {name: "Code"},
-#   {name: "Call Friends & Family"},
-#   {name: "Stick to Budget"},
-#   {name: "Exercise"},
-#   {name: "Read"},
-#   {name: "Clean"},
-#   {name: "Attend a Networking Event"},
-#   {name: "Meditate"},
-#   {name: "Wake up at 5AM"}
+#   {name: "Eat Healthy", user_id: 1},
+#   {name: "Code", user_id: 1},
+#   {name: "Call Friends & Family", user_id: 1},
+#   {name: "Stick to Budget", user_id: 1},
+#   {name: "Exercise", user_id: 1},
+#   {name: "Read", user_id: 1},
+#   {name: "Clean", user_id: 1},
+#   {name: "Attend a Networking Event", user_id: 1},
+#   {name: "Meditate", user_id: 1},
+#   {name: "Wake up at 5AM", user_id: 1}
 # ]
 
 
-inputs = [
-
-{goal_id: 1, created_at: "2017-02-06T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-02-05T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-02-05T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-02-04T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-02-04T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-02-04T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-01T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-01T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-01-01T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-01T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-01T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-01T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-02T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-02T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-02T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-01-02T16:14:47.707Z"},
-{goal_id: 9, created_at: "2017-01-02T16:14:47.707Z"},
-
-{goal_id: 4, created_at: "2017-01-03T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-03T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-03T16:14:47.707Z"},
-
-{goal_id: 4, created_at: "2017-01-04T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-04T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-04T16:14:47.707Z"},
-
-{goal_id: 7, created_at: "2017-01-05T16:14:47.707Z"},
-{goal_id: 1, created_at: "2017-01-05T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-06T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-01-06T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-06T16:14:47.707Z"},
-
-{goal_id: 5, created_at: "2017-01-07T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-08T16:14:47.707Z"},
-{goal_id: 1, created_at: "2017-01-08T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-08T16:14:47.707Z"},
-
-{goal_id: 5, created_at: "2017-01-09T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-09T16:14:47.707Z"},
-
-{goal_id: 2, created_at: "2017-01-10T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-10T16:14:47.707Z"},
-
-{goal_id: 4, created_at: "2017-01-11T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-11T16:14:47.707Z"},
-
-{goal_id: 2, created_at: "2017-01-12T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-12T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-12T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-12T16:14:47.707Z"},
-
-{goal_id: 6, created_at: "2017-01-13T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-13T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-13T16:14:47.707Z"},
-{goal_id: 1, created_at: "2017-01-13T16:14:47.707Z"},
-
-{goal_id: 7, created_at: "2017-01-14T16:14:47.707Z"},
-{goal_id: 9, created_at: "2017-01-14T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-15T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-15T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-15T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-16T16:14:47.707Z"},
-
-{goal_id: 4, created_at: "2017-01-17T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-17T16:14:47.707Z"},
-
-{goal_id: 7, created_at: "2017-01-18T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-18T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-19T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-19T16:14:47.707Z"},
-
-{goal_id: 2, created_at: "2017-01-20T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-20T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-21T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-01-21T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-22T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-22T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-22T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-22T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-23T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-23T16:14:47.707Z"},
-
-{goal_id: 5, created_at: "2017-01-24T16:14:47.707Z"},
-{goal_id: 6, created_at: "2017-01-24T16:14:47.707Z"},
-
-{goal_id: 2, created_at: "2017-01-25T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-25T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-26T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-26T16:14:47.707Z"},
-{goal_id: 5, created_at: "2017-01-26T16:14:47.707Z"},
-
-{goal_id: 6, created_at: "2017-01-27T16:14:47.707Z"},
-{goal_id: 7, created_at: "2017-01-27T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-28T16:14:47.707Z"},
-{goal_id: 3, created_at: "2017-01-28T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-28T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-28T16:14:47.707Z"},
-
-{goal_id: 1, created_at: "2017-01-29T16:14:47.707Z"},
-{goal_id: 2, created_at: "2017-01-29T16:14:47.707Z"},
-
-{goal_id: 3, created_at: "2017-01-30T16:14:47.707Z"},
-{goal_id: 4, created_at: "2017-01-30T16:14:47.707Z"},
-
-{goal_id: 5, created_at: "2017-01-31T16:14:47.707Z"}
-
-]
-
-
-inputs.each do |input|
-  Input.create(input)
+7.downto(1) do |i|
+  input = Input.new(goal_id: 1, user_id: 1)
+  input.created_at = i.days.ago
+  input.save
 end
 
-# 
+7.downto(1) do |i|
+  input = Input.new(goal_id: 2, user_id: 1)
+  input.created_at = i.days.ago
+  input.save
+end
+
+7.downto(1) do |i|
+  input = Input.new(goal_id: 3, user_id: 1)
+  input.created_at = i.days.ago
+  input.save
+end
+
+7.downto(1) do |i|
+  input = Input.new(goal_id: 4, user_id: 1)
+  input.created_at = i.days.ago
+  input.save
+end
+
+
+
+
+# inputs.each do |input|
+#   Input.create(input)
+# end
+
 # goals.each do |goal|
 #   Goal.create(goal)
 # end

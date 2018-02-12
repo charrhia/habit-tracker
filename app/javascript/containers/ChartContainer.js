@@ -79,7 +79,7 @@ handleMonthlyClick() {
       <div id="charting">
         <h1>Analytics</h1>
         <div id="chart-msg">
-          <p>Click each button to pull current report</p>
+          <p>Select a report to pull current progress to date</p>
         </div>
 
         <div id="action-list">
