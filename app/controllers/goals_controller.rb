@@ -2,6 +2,7 @@ class GoalsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
+
     @goals = Goal.all
     @goal = Goal.new
 
@@ -9,14 +10,16 @@ class GoalsController < ApplicationController
     @input = Input.new
 
     @user_goals = Goal.where(:user_id => current_user.id)
-    @goal_options = @user_goals.map{ |goal| [goal.name, goal.id] }
+    @goal_options = @user_goals.map { |goal| [goal.name, goal.id] }
   end
 
   def log
+
     @inputs = Input.where(:user_id => current_user.id)
   end
 
   def new
+
     @goal = Goal.new
     @goals = Goal.where(:user_id => current_user.id)
 
@@ -25,6 +28,7 @@ class GoalsController < ApplicationController
   end
 
   def create
+
     @goals = Goal.all
     @goal = Goal.new(goal_params)
 
@@ -37,18 +41,18 @@ class GoalsController < ApplicationController
   end
 
   def show
+
     @goals = Goal.all
     @inputs = Input.all
   end
 
-
-  # new code
-
   def edit
+
     @goal = Goal.find(params[:id])
   end
 
   def update
+
     @goal = Goal.find(params[:id])
     if @goal.update(goal_params)
       redirect_to '/goals/new'
@@ -58,6 +62,7 @@ class GoalsController < ApplicationController
   end
 
   def destroy
+
     @goals = Goal.where(:user_id => current_user.id)
 
     @goal = Goal.find(params[:id])
@@ -69,7 +74,9 @@ class GoalsController < ApplicationController
   end
 
   private
+
   def goal_params
+    
     params.require(:goal).permit(:name, :user_id)
   end
 end

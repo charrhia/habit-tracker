@@ -10,8 +10,6 @@ require File.join(File.dirname(__FILE__), 'support/valid_attribute')
 require 'capybara/rspec'
 # Add additional requires below this line. Rails is not loaded until this point!
 
-
-
 RSpec.configure do |config|
   config.include Devise::Test::ControllerHelpers, type: :controller
 end
