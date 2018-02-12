@@ -3,7 +3,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart,
 
 const DailyReportTile = (props) => {
 
-    let mappedData = props.inputs.inputs.map(input => (
+    let mappedDayData = props.inputs.inputs.map(input => (
       {goal: input.goal_id, accomplished: input.goal_id}
     ));
 
@@ -13,7 +13,7 @@ const DailyReportTile = (props) => {
 
         <h2>Daily Report</h2>
 
-        <BarChart width={750} height={250} data={mappedData}>
+        <BarChart width={750} height={250} data={mappedDayData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="goal" />
             <YAxis />
