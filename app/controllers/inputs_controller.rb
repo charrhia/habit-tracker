@@ -28,6 +28,19 @@ class InputsController < ApplicationController
     @inputs = Input.where(:user_id => current_user.id)
   end
 
+
+  def destroy
+    @inputs = Input.where(:user_id => current_user.id)
+
+    @input = Input.find(params[:id])
+    if @input.destroy
+      redirect_to '/log'
+    else
+      render '/log'
+    end
+  end
+
+
   def input_params
     params.require(:input).permit(:goal_id, :date, :user_id)
   end

@@ -8,9 +8,9 @@
 ruby
 rails
 react
-# Installation 
+# Installation
 ```
-bundle install 
+bundle install
 npm install
 rake db:create
 rake db:migrate
@@ -19,6 +19,7 @@ Then navigate to http://localhost:3000 in your browser.
 
 # Test Suite
  ```
+ rake db:test:prepare
  rake
  npm test
  ```
