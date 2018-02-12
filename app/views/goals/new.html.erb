@@ -6,7 +6,11 @@
         <% @goals.each do |goal| %>
         <button>
 
-          <%= link_to '<i class="fas fa-times"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
+          <%= link_to '<i class="fas fa-times delete"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
+
+<!-- need to connect to form params -->
+          <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe,  { action: :update, id: goal.id }, method: :put %>
+
           <%= goal.name %>
         </button>
           <% end %>
@@ -15,30 +19,7 @@
 
   <div class="form-container">
     <div class="form-things">
-      <%= form_for(@goal) do |f| %>
-
-      <div class="field">
-
-        <%- flash.each do |key, value| -%>
-          <div id="flash" class="flash flash-<%= key %>">
-            <%= value %>
-          </div>
-        <%- end -%>
-
-        <%= f.label :name, 'Goal:' %><br />
-        <%= f.text_field :name %>
-      </div>
-      <br />
-
-        <% if current_user %>
-            <%= f.hidden_field :user_id, value: current_user.id%>
-        <% end %>
-
-      <div class="submit">
-        <%= f.submit 'Add Goal' %>
-      </div>
-
-      <% end %>
+      <%= render 'form' %>
     </div>
   </div>
 </div>

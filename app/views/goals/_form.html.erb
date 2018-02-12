@@ -1,0 +1,24 @@
+<%= form_for(@goal) do |f| %>
+
+<div class="field">
+
+  <%- flash.each do |key, value| -%>
+    <div id="flash" class="flash flash-<%= key %>">
+      <%= value %>
+    </div>
+  <%- end -%>
+
+  <%= f.label :name, 'Goal:' %><br />
+  <%= f.text_field :name %>
+</div>
+<br />
+
+  <% if current_user %>
+      <%= f.hidden_field :user_id, value: current_user.id%>
+  <% end %>
+
+<div class="submit">
+  <%= f.submit 'Add Goal' %>
+</div>
+
+<% end %>
