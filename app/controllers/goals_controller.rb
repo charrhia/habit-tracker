@@ -46,8 +46,8 @@ class GoalsController < ApplicationController
     @inputs = Input.all
   end
 
-  def edit
 
+  def edit
     @goal = Goal.find(params[:id])
   end
 
@@ -76,7 +76,7 @@ class GoalsController < ApplicationController
   private
 
   def goal_params
-    
+
     params.require(:goal).permit(:name, :user_id)
   end
 end

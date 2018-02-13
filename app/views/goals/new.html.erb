@@ -9,7 +9,9 @@
           <%= link_to '<i class="fas fa-times delete"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
 
 <!-- need to connect to form params -->
-          <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe,  { action: :update, id: goal.id }, method: :put %>
+          <!-- <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe,  { action: :update, id: goal.id }, method: :put %> -->
+
+          <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_goal_path(goal.id) %>
 
           <%= goal.name %>
         </button>
