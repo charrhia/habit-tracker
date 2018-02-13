@@ -1,4 +1,7 @@
 class Api::V1::InputsController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:index]
+  protect_from_forgery unless: -> { request.format.json? }
+
   def index
 
     inputs = Input.all
@@ -8,7 +11,10 @@ class Api::V1::InputsController < ApplicationController
   def day
 
     date = DateTime.now
-    inputs = Input.where(created_at: date.midnight..date.end_of_day)
+
+    input = Input.where(:user_id => current_user.id)
+
+    inputs = input.where(created_at: date.midnight..date.end_of_day)
 
     render json: inputs
   end
@@ -16,7 +22,10 @@ class Api::V1::InputsController < ApplicationController
   def week
 
     date = DateTime.now
-    inputs = Input.where(created_at: date.midnight..date.end_of_week)
+
+    input = Input.where(:user_id => current_user.id)
+
+    inputs = input.where(created_at: date.midnight..date.end_of_week)
 
     render json: inputs
   end
@@ -24,8 +33,18 @@ class Api::V1::InputsController < ApplicationController
   def month
 
     date = DateTime.now
-    inputs = Input.where(created_at: date.midnight..date.end_of_month)
+
+    input = Input.where(:user_id => current_user.id)
+
+    inputs = input.where(created_at: date.midnight..date.end_of_month)
 
     render json: inputs
   end
-end
+
+  private
+
+    def input_params
+
+      params.require(:input).permit(:goal_id, :date, :user_id)
+    end
+  end
