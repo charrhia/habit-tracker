@@ -18,7 +18,7 @@ class ChartContainer extends Component {
   }
 
   componentDidMount() {
-    fetch(`/api/v1/goals.json`)
+    fetch(`/api/v1/goals.json`, { credentials: 'same-origin' })
     .then(response => {
       if (response.ok) {
         return response;
@@ -38,7 +38,7 @@ class ChartContainer extends Component {
 }
 
 handleDailyClick() {
-  fetch(`/api/v1/inputs/day.json`)
+  fetch(`/api/v1/inputs/day.json`, { credentials: 'same-origin' })
   .then(response => {
     if (response.ok) {
       return response;
@@ -50,7 +50,7 @@ handleDailyClick() {
   })};
 
 handleWeeklyClick() {
-  fetch(`/api/v1/inputs/week.json`)
+  fetch(`/api/v1/inputs/week.json`, { credentials: 'same-origin' })
   .then(response => {
     if (response.ok) {
       return response;
@@ -62,7 +62,7 @@ handleWeeklyClick() {
   })};
 
 handleMonthlyClick() {
-  fetch(`/api/v1/inputs/month.json`)
+  fetch(`/api/v1/inputs/month.json`, { credentials: 'same-origin' })
   .then(response => {
     if (response.ok) {
       return response;
