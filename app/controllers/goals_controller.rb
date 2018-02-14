@@ -1,3 +1,4 @@
+# goals
 class GoalsController < ApplicationController
   skip_before_action :verify_authenticity_token
 

@@ -39,7 +39,7 @@ class Api::V1::InputsController < ApplicationController
 
   private
 
-    def input_params
-      params.require(:input).permit(:goal_id, :date, :user_id)
-    end
+  def input_params
+    params.require(:input).permit(:goal_id, :date, :user_id)
+  end
 end

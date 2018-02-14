@@ -1,7 +1,8 @@
 # require 'rails_helper'
 # RSpec.describe Api::V1::GoalsController, type: :controller do
 #   user_variable_four = FactoryBot.create(:user)
-#   let!(:first_goal) { Goal.create(name: 'Eat Healthy', user_id: user_variable_four.id) }
+#   let!(:first_goal) { Goal.create(name: 'Eat Healthy', user_id: u
+#    ser_variable_four.id) }
 #
 #   describe 'GET#index' do
 #     it 'should return a list of all the goals' do
