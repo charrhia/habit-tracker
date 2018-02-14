@@ -17,7 +17,6 @@ const MonthlyReportTile = (props) => {
   return(
 
     <div id="graphs">
-
       <h2>Monthly Report</h2>
       <BarChart width={750} height={250} data={mappedMonthData}>
         <CartesianGrid strokeDasharray="3 3" />

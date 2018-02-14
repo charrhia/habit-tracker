@@ -3,13 +3,11 @@ class Api::V1::InputsController < ApplicationController
   protect_from_forgery unless: -> { request.format.json? }
 
   def index
-
     inputs = Input.all
     render json: inputs
   end
 
   def day
-
     date = DateTime.now
 
     input = Input.where(:user_id => current_user.id)
@@ -20,7 +18,6 @@ class Api::V1::InputsController < ApplicationController
   end
 
   def week
-
     date = DateTime.now
 
     input = Input.where(:user_id => current_user.id)
@@ -31,7 +28,6 @@ class Api::V1::InputsController < ApplicationController
   end
 
   def month
-
     date = DateTime.now
 
     input = Input.where(:user_id => current_user.id)
@@ -44,7 +40,6 @@ class Api::V1::InputsController < ApplicationController
   private
 
     def input_params
-
       params.require(:input).permit(:goal_id, :date, :user_id)
     end
-  end
+end
