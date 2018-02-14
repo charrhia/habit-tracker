@@ -1,5 +1,4 @@
 # require 'rails_helper'
-#
 # RSpec.describe Api::V1::GoalsController, type: :controller do
 #   user_variable_four = FactoryBot.create(:user)
 #   let!(:first_goal) { Goal.create(name: 'Eat Healthy', user_id: user_variable_four.id) }
