@@ -1,3 +1,4 @@
+# inputs
 class InputsController < ApplicationController
   def index
     @goal = Goal.find(params[:goal_id])
@@ -42,7 +43,6 @@ class InputsController < ApplicationController
   private
 
   def input_params
-
     params.require(:input).permit(:goal_id, :date, :user_id)
   end
 end
