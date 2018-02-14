@@ -34,16 +34,11 @@ const DailyReportTile = (props) => {
 
             <XAxis dataKey="goal" />
             <YAxis />
-            <Tooltip />
+            {/* <Tooltip /> */}
             <Legend />
-            <Bar dataKey="accomplished" fill="#87AC4E" barSize={50} />
-
-            {/* {props.goals.goals.map((goal) => {
-                return (<Bar dataKey={`${goal.id} - ${goal.name}`} fill="#87AC4E" />)
-              })} */}
-
+            <Bar dataKey="accomplished" fill="#ffffff" barSize={50} />
               {props.goals.goals.map((goal, index) => {
-                  return (<Bar key={index} dataKey={`${goal.id} - ${goal.name}`} fill={COLORS[index % COLORS.length]}/>)
+                  return (<Bar key={index} dataKey={`${goal.name}`} fill={COLORS[index % COLORS.length]}/>)
                 })}
         </BarChart>
       </div>
