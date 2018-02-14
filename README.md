@@ -5,17 +5,19 @@
 [![Code Climate](https://codeclimate.com/github/charrhia/habit-tracker/badges/gpa.svg)](https://codeclimate.com/github/charrhia/habit-tracker)
 
 # Ruby Version
-ruby
-rails
-react
+* Ruby v 2.4.1
+* Rails v 5.1.4
+
+
 # Installation
+
 ```
 bundle install
 npm install
 rake db:create
 rake db:migrate
 ```
-Then navigate to http://localhost:3000 in your browser.
+Then navigate to http://localhost:3000 in your browser to view locally or access directly through https://goal-habit-tracker.herokuapp.com/
 
 # Test Suite
  ```
