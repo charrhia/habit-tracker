@@ -9,8 +9,14 @@ RSpec.describe Input do
     it 'returns list of input' do
       user_variable_two = FactoryBot.create(:user)
 
-      first_goal = Goal.create(name: 'Read More', user_id: user_variable_two.id)
-      first_input = Input.create(goal_id: first_goal.id, user_id: user_variable_two.id)
+      first_goal = Goal.create
+        (
+        name: 'Read More', user_id: user_variable_two.id
+        )
+      first_input = Input.create
+        (
+        goal_id: first_goal.id, user_id: user_variable_two.id
+        )
       inputs = Input.all
 
       expect(inputs).to include(first_input)

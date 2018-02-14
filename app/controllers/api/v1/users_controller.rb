@@ -4,6 +4,6 @@ class Api::V1::UsersController < ApplicationController
 
   def index
     @current_user = current_user
-    render json: { current_user: @current_user}
+    render json: { current_user: @current_user }
   end
 end
