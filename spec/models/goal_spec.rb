@@ -9,8 +9,12 @@ RSpec.describe Goal do
     it 'returns list of goals' do
       user_variable_three = FactoryBot.create(:user)
 
-      first_goal = Goal.create(name: 'Work Out', user_id: user_variable_three.id)
-      second_goal = Goal.create(name: 'Eat Healthy', user_id: user_variable_three.id)
+      first_goal = Goal.create(
+        name: 'Work Out', user_id: user_variable_three.id
+        )
+      second_goal = Goal.create(
+        name: 'Eat Healthy', user_id: user_variable_three.id
+        )
 
       goals = Goal.all
 

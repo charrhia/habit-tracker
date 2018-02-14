@@ -2,21 +2,18 @@
 
   <div class="goal-list">
     <h3>Here is a list of your goals. Would you like to update?</h3>
-      <ul>
-        <% @goals.each do |goal| %>
-        <button>
+    <ul>
+      <% @goals.each do |goal| %>
+      <button>
 
-          <%= link_to '<i class="fas fa-times delete"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
+        <%= link_to '<i class="fas fa-times delete"></i>'.html_safe,  { action: :destroy, id: goal.id }, method: :delete, data: {confirm: "Are you sure? Your data will be deleted"} %>
 
-<!-- need to connect to form params -->
-          <!-- <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe,  { action: :update, id: goal.id }, method: :put %> -->
+        <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_goal_path(goal.id) %>
 
-          <%= link_to '<i class="fas fa-pencil-alt edit"></i>'.html_safe, edit_goal_path(goal.id) %>
-
-          <%= goal.name %>
-        </button>
-          <% end %>
-      </ul>
+        <%= goal.name %>
+      </button>
+      <% end %>
+    </ul>
   </div>
 
   <div class="form-container">

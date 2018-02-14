@@ -1,6 +1,4 @@
-# 
 # require 'rails_helper'
-#
 # RSpec.describe Api::V1::InputsController, type: :controller do
 #   user_variable = FactoryBot.create(:user)
 #   let!(:first_goal) {

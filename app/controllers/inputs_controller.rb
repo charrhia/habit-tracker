@@ -1,6 +1,5 @@
 class InputsController < ApplicationController
   def index
-
     @goal = Goal.find(params[:goal_id])
 
     @inputs = @goal.inputs
@@ -8,7 +7,6 @@ class InputsController < ApplicationController
   end
 
   def new
-
     @goal = Goal.find(params[:goal_id])
 
     @inputs = Input.all
@@ -16,7 +14,6 @@ class InputsController < ApplicationController
   end
 
   def create
-
     input = Input.new(input_params)
 
     if input.save
@@ -28,12 +25,10 @@ class InputsController < ApplicationController
   end
 
   def log
-
     @inputs = Input.where(:user_id => current_user.id)
   end
 
   def destroy
-
     @inputs = Input.where(:user_id => current_user.id)
 
     @input = Input.find(params[:id])
@@ -44,7 +39,7 @@ class InputsController < ApplicationController
     end
   end
 
-private
+  private
 
   def input_params
 
