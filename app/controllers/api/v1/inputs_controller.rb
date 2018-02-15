@@ -14,7 +14,9 @@ class Api::V1::InputsController < ApplicationController
 
     inputs = input.where(created_at: date.midnight..date.end_of_day)
 
-    render json: inputs
+    input_stats = current_user.inputs.where("created_at > ?", Time.now.beginning_of_day).group(:goal_id).count
+
+    render json: input_stats
   end
 
   def week
@@ -24,7 +26,9 @@ class Api::V1::InputsController < ApplicationController
 
     inputs = input.where(created_at: date.midnight..date.end_of_week)
 
-    render json: inputs
+    input_stats = current_user.inputs.where("created_at > ?", Time.now.beginning_of_week).group(:goal_id).count
+
+    render json: input_stats
   end
 
   def month
@@ -34,7 +38,9 @@ class Api::V1::InputsController < ApplicationController
 
     inputs = input.where(created_at: date.midnight..date.end_of_month)
 
-    render json: inputs
+    input_stats = current_user.inputs.where("created_at > ?", Time.now.beginning_of_month).group(:goal_id).count
+
+    render json: input_stats
   end
 
   private
