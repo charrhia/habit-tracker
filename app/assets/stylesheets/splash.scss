@@ -26,21 +26,28 @@
 
 /* navigation dropdown */
 
-#splash-nav {
-  color: white;
-  background-color: black;
-  padding: 10px 10px;
-  font-size: 50px;
-  border-radius: 10px;
-  opacity: 0.5;
+.dropdown-container {
+  margin: 0 auto;
+  align-content: center;
+  text-align: center;
 }
+
 
 .dropdown {
   position: relative;
   display: inline-block;
   color: white;
-  margin-left: 50%;
   margin-top: 20px;
+}
+
+
+#splash-nav {
+  color: white;
+  background-color: black;
+  padding: 10px 10px;
+  font-size: 60px;
+  border-radius: 10px;
+  opacity: 0.5;
 }
 
 .dropdown-content {
