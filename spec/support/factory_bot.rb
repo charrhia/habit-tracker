@@ -7,3 +7,10 @@ FactoryBot.define do
     password_confirmation 'password'
   end
 end
+
+FactoryBot.define do
+  factory :goal do
+    name 'Work Out'
+    user_id '1'
+  end
+end
