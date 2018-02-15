@@ -79,6 +79,11 @@
     align-content: center;
     max-width: 300px;
   }
+
+  .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
+    display: block;
+    visibility: visible;
+  }
 }
 
 // larger iphones +
@@ -89,6 +94,11 @@ and (max-width: 736px)
 and (-webkit-min-device-pixel-ratio: 3) {
   .top-bar {
     height: 30%;
+  }
+
+  .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
+    display: block;
+    visibility: visible;
   }
 }
 
@@ -129,6 +139,11 @@ and (-webkit-min-device-pixel-ratio: 1) {
   .top-bar a {
     font-size: 20px;
   }
+
+  .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
+    display: block;
+    visibility: visible;
+  }
 }
 
 // ipad pro larger screens
@@ -162,6 +177,11 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   #action-list button {
     font-size: 40px;
+  }
+
+  .dropdown:hover .dropdown-content, .dropdown:focus .dropdown-content {
+    display: block;
+    visibility: visible;
   }
 
 }
