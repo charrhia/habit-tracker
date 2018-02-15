@@ -26,6 +26,11 @@ class InputsController < ApplicationController
   end
 
   def log
+    date = DateTime.now
+    input = Input.where(:user_id => current_user.id)
+    @inputs_day = input.where("created_at > ?", Time.now.beginning_of_day)
+    @inputs_week = input.where("created_at > ?", Time.now.beginning_of_week)
+    @inputs_month = input.where("created_at > ?", Time.now.beginning_of_month)
     @inputs = Input.where(:user_id => current_user.id)
   end
 
