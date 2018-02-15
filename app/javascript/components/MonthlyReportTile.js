@@ -5,13 +5,25 @@ const MonthlyReportTile = (props) => {
 
   const COLORS = ["#85C1E9","#82E0AA","#BB8FCE","#F9E79F","#F5B7B1","#CCD1D1","#F5B041","#9B59B6"]
 
+
+  let inputs = props.inputs
+
+  let output = [];
+  for(var key in inputs) {
+    output.push({
+      goal: key,
+      count: inputs[key]
+    })
+  }
+
+
   let fill;
   let mappedGoals = props.goals.goals.map((goal, index) => (
     fill = `${COLORS[index % COLORS.length]}`
   ))
 
-  let mappedMonthData = props.inputs.inputs.map((input, index) => (
-    {goal: input.goal_id, accomplished: index, fill: `${mappedGoals[index]}`}
+  let mappedMonthData = output.map((key, index) => (
+    {goal: key.goal, count: key.count, fill:`${COLORS[index % COLORS.length]}`}
   ))
 
   return(
@@ -23,7 +35,7 @@ const MonthlyReportTile = (props) => {
         <XAxis dataKey="goal" />
         <YAxis />
         <Legend />
-        <Bar dataKey="accomplished" fill="#ffffff" barSize={50} />
+        <Bar dataKey="count" fill="#ffffff" barSize={50} />
         {props.goals.goals.map((goal, index) => {
           return (<Bar key={index} dataKey={`${goal.name}`} fill={COLORS[index % COLORS.length]}/>)
         })}
