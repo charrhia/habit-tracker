@@ -3,7 +3,7 @@
 @media only screen and (max-width: 768px) {
 
   .top-bar {
-    height: 25%;
+    height: 40%;
     font-size: 12px;
   }
 
@@ -20,7 +20,7 @@
   }
 
   #graphs {
-    max-width: 700px;
+    max-width: 600px;
     font-size: 10px;
   }
 
@@ -54,8 +54,41 @@
     width: 300px;
     font-size: 30px;
   }
+
+  #welcome-text {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .recharts-wrapper, .recharts-surface, .recharts-legend-wrapper {
+    max-width: 200px;
+  }
+
+  .recharts-surface {
+    max-width: 350px;
+  }
+
+  #graphs h2 {
+    font-size: 20px;
+  }
+
+  .recharts-legend-wrapper {
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    max-width: 300px;
+  }
 }
 
+
+@media only screen
+and (min-width: 414px)
+and (max-width: 736px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  .top-bar {
+    height: 30%;
+  }
+}
 
 @media only screen and (min-width: 768px) {
   .top-bar {
