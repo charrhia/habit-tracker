@@ -3,9 +3,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart,
 
 const DailyReportTile = (props) => {
 
-  const COLORS = ["#85C1E9","#82E0AA","#BB8FCE","#F9E79F","#F5B7B1","#CCD1D1","#F5B041","#9B59B6"]
-
-  // 22 % COLORS.length
+const COLORS = ["#85C1E9","#82E0AA","#BB8FCE","#F9E79F","#F5B7B1","#CCD1D1","#F5B041","#9B59B6"]
 
 let inputs = props.inputs
 
@@ -27,7 +25,6 @@ for(var key in inputs) {
   ))
 
   return(
-
     <div id="graphs">
       <h2>Daily Report</h2>
       <BarChart width={750} height={250} data={mappedDayData}>

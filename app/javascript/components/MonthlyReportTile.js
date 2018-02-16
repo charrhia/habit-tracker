@@ -5,7 +5,6 @@ const MonthlyReportTile = (props) => {
 
   const COLORS = ["#85C1E9","#82E0AA","#BB8FCE","#F9E79F","#F5B7B1","#CCD1D1","#F5B041","#9B59B6"]
 
-
   let inputs = props.inputs
 
   let output = [];
@@ -15,7 +14,6 @@ const MonthlyReportTile = (props) => {
       count: inputs[key]
     })
   }
-
 
   let fill;
   let mappedGoals = props.goals.goals.map((goal, index) => (
@@ -27,7 +25,6 @@ const MonthlyReportTile = (props) => {
   ))
 
   return(
-
     <div id="graphs">
       <h2>Monthly Report</h2>
       <BarChart width={750} height={250} data={mappedMonthData}>

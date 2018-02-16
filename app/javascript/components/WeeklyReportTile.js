@@ -15,7 +15,6 @@ const WeeklyReportTile = (props) => {
     })
   }
 
-
   let fill;
   let mappedGoals = props.goals.goals.map((goal, index) => (
     fill = `${COLORS[index % COLORS.length]}`
@@ -25,9 +24,7 @@ const WeeklyReportTile = (props) => {
     {goal: key.goal, count: key.count, fill:`${COLORS[index % COLORS.length]}`}
   ))
 
-
   return(
-
     <div id="graphs">
       <h2>Weekly Report</h2>
       <BarChart width={750} height={250} data={mappedWeekData}>

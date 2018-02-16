@@ -5,7 +5,6 @@ RSpec.describe UsersController, :type => :controller do
 
   describe "#index" do
     it "user index" do
-
       current_user_2 = FactoryBot.create(:user)
       sign_in(current_user_2)
 
