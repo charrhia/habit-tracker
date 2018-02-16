@@ -18,7 +18,8 @@
 
 .top-bar {
   height: 20%;
-  text-align: center;
+  text-align: right;
+  padding-right: 20px;
   background-color: #92B558;
   border-bottom: 3px solid rgba(0, 0, 0, 0.7);;
 }
@@ -28,11 +29,11 @@
   font-size: 20px;
   margin-left: 10px;
   color: white;
+  padding: 10px 10px;
 }
 
 .side-area a:hover {
-  color: #273746;
-  text-decoration: underline;
+  background-color: #81a04b;
 }
 
 /* flash msg */
