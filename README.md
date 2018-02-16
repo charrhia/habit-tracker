@@ -4,10 +4,10 @@
 [![Coverage Status](https://coveralls.io/repos/github/charrhia/habit-tracker/badge.svg?branch=master)](https://coveralls.io/github/charrhia/habit-tracker?branch=master)
 [![Code Climate](https://codeclimate.com/github/charrhia/habit-tracker/badges/gpa.svg)](https://codeclimate.com/github/charrhia/habit-tracker)
 
+
 # Ruby Version
 * Ruby v 2.4.1
 * Rails v 5.1.4
-
 
 # Installation
 
