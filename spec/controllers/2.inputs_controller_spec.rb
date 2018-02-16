@@ -5,7 +5,6 @@ RSpec.describe InputsController, :type => :controller do
 
   describe "#index" do
     it "input index" do
-
       current_user_2 = FactoryBot.create(:user)
       goal_2 = Goal.create(name: "work out", user_id: current_user_2.id)
       input_2 = Input.create(goal_id: goal_2.id, user_id: current_user_2.id)
@@ -21,7 +20,6 @@ RSpec.describe InputsController, :type => :controller do
 
   describe "#new" do
     it "input new" do
-
       current_user_2 = FactoryBot.create(:user)
       goal_2 = Goal.create(name: "work out", user_id: current_user_2.id)
       input_2 = Input.create(goal_id: goal_2.id, user_id: current_user_2.id)
@@ -37,7 +35,6 @@ RSpec.describe InputsController, :type => :controller do
 
   describe "#create" do
     it "input create" do
-
       current_user_2 = FactoryBot.create(:user)
       goal_2 = Goal.create(name: "work out", user_id: current_user_2.id)
       input_2 = Input.create(goal_id: goal_2.id, user_id: current_user_2.id)
@@ -49,7 +46,6 @@ RSpec.describe InputsController, :type => :controller do
 
   describe "#log" do
     it "goal log" do
-
       current_user_2 = FactoryBot.create(:user)
       goal_2 = Goal.create(name: "work out", user_id: current_user_2.id)
       input_2 = Input.create(goal_id: goal_2.id, user_id: current_user_2.id)
@@ -64,7 +60,6 @@ RSpec.describe InputsController, :type => :controller do
 
   describe "#destroy" do
     it "input destroy" do
-
       current_user_2 = FactoryBot.create(:user)
       goal_2 = Goal.create(name: "work out", user_id: current_user_2.id)
       input_2 = Input.create(goal_id: goal_2.id, user_id: current_user_2.id)

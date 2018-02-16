@@ -5,7 +5,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#index" do
     it "input index" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
 
@@ -20,7 +19,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#new" do
     it "goal new" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
@@ -36,7 +34,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#show" do
     it "goal show" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
@@ -52,7 +49,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#create" do
     it "goal create" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
@@ -64,7 +60,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#update" do
     it "goal update" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
@@ -76,7 +71,6 @@ RSpec.describe GoalsController, :type => :controller do
 
   describe "#edit" do
     it "goal edit" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
@@ -90,10 +84,8 @@ RSpec.describe GoalsController, :type => :controller do
     end
   end
 
-
   describe "#destroy" do
     it "goal destroy" do
-
       current_user = FactoryBot.create(:user)
       goal_1 = Goal.create(name: "work out", user_id: current_user.id)
       input_1 = Input.create(goal_id: goal_1.id, user_id: current_user.id)
