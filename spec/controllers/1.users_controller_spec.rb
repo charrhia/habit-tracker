@@ -1,11 +1,18 @@
 require 'rails_helper'
 
-feature 'user index' do
-  scenario 'I want to successfully create a user' do
+RSpec.describe UsersController, :type => :controller do
+  include Devise::TestHelpers
 
-    user_variable_7 = FactoryBot.create(:user)
-    users = User.all
+  describe "#index" do
+    it "user index" do
 
-    expect(users).to include(user_variable_7)
+      current_user_2 = FactoryBot.create(:user)
+      sign_in(current_user_2)
+
+      get :index, params: { id: current_user_2.id }
+
+      returned_json = response.body
+      expect(response.status).to eq 200
+    end
   end
 end

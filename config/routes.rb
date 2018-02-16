@@ -25,4 +25,6 @@ Rails.application.routes.draw do
     resources :inputs, only: [:index, :new, :create, :destroy]
   end
   resources :inputs, only: [:index, :new, :create, :destroy]
+
+  resources :users, only: [:index, :new, :create, :destroy]
 end
