@@ -26,7 +26,7 @@ Then navigate to http://localhost:3000 in your browser to view locally or access
  npm test
  ```
  # Application Walkthrough
-* A user must create an account and sign in
+* Create an account and sign in
 * Navigate to the 'Goals' link on the navigation bar or the 'click here' link on the front page in order to set up your desired goals you want to track
 * Record whether you accomplished that goal daily on the main page
 * Assess progress with the daily, weekly, and monthly report functions on your 'Reports' page
